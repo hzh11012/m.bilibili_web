@@ -251,7 +251,6 @@ export default {
   }
 };
 </script>
-<option data-v-9bd7ee1a="" disabled="disabled" value="">--其它--</option>
 <style lang="less" scoped>
 .selected-box {
   width: 100%;
