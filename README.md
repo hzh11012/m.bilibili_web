@@ -22,7 +22,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
  LoginBtn  | 注释  | 类型
  ---- | ----- | ------  
- onClick  | 按钮单击事件 | event 
+ @onClick  | 按钮单击事件 | event 
  size  | 尺寸，可选值为 large small mini | string  
  plain  | 是否为朴素按钮 | boolean 
  color  | 按钮颜色，支持传入linear-gradient渐变色 | string
@@ -36,20 +36,20 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  maxlength  | 输入的最大字符数 | number | string
  isShowBtn  | 是否显示右侧按钮 | boolean 
  btnMsg  | 右侧按钮文字 | string 
- onClick  | 右侧按钮单击事件 | event 
+ @onClick  | 右侧按钮单击事件 | event 
 
  LoginTop  | 注释  | 类型
  ---- | ----- | ------  
  middleTop  | 中间文本 | string 
  leftTop  | 左侧插槽 | 
  rightTop  | 右侧文本 | string 
- changeLogin  | 右侧文本单击事件 | event
+ @changeLogin  | 右侧文本单击事件 | event
  
   NavBar  | 注释  | 类型
  ---- | ----- | ------  
  hotSezrch  | 搜索框占位提示文字 | string 
  avatarImg  | 用户头像 | url
- onClick  | 右侧按钮单击事件 | event 
+ @onClick  | 右侧按钮单击事件 | event 
  btnTitle  | 右侧按钮文字 | string
  leftHref  | 左侧Logo的href属性 | url
  middleHref  | 中间搜索框的href属性 | url 
@@ -65,7 +65,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  likesNum  | 获赞数 | string 
  btnType  | 按钮类型 true为实心按钮 false为朴素按钮 | boolean 
  name  | 用户昵称 | string 
- gender  | 性别icon 可选0保密 1男 2女 | number 
+ gender  | 性别icon 可选 0男 1女 其他为保密 | number 
  level  | 等级icon 可选0-6 | number
  isVip  | 是否为会员 | boolean
  vipType  | 会员类型 | string
@@ -83,7 +83,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  --  | dynamicList注释 | --
  id  | 索引 | number 
  userImg  | 用户头像 | url 
- userBadge  | 用户认证类型 可选0无 1个人 2组织 | number 
+ userBadge  | 用户认证类型 可选 0个人 1组织 其他为无 | number 
  userName  | 用户昵称 | string 
  userExtra  | 用户动态中的时间戳等 | string 
  isSupport  | 该动态是否已经点赞 | boolean 
@@ -108,3 +108,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  albumTitle  | 相簿标题 | string 
  viewNum  | 播放量 | number 
  liuyanNum  | 评论数 | number 
+
+  UserSpace  | 注释  | 类型
+ ---- | ----- | ------  
+ userDetail  | 用户详情 | 对象
+ --  | userDetail注释 | --
+ avatarImg  | 用户头像 | url 
+ name  | 用户昵称 | string 
+ uid  | 用户UID | number 
+ gender  | 性别icon 可选 0男 1女 其他为保密 | number 
+ birthday  | 用户生日 | string 
+ signature  | 用户个性签名 | string 
+ --  | -- | --
+ @logOut  | 退出登录 | 事件

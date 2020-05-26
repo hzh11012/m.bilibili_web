@@ -37,8 +37,8 @@
       <div class="base">
         <div class="name">{{userInfo.name}}</div>
         <div class="gender">
-          <i v-if="userInfo.gender == 1" class="iconfont icon-male" style="color:#00a1d6"></i>
-          <i v-if="userInfo.gender == 2" class="iconfont icon-female" style="color:#fb7299"></i>
+          <i v-if="userInfo.gender == 0" class="iconfont icon-male" style="color:#00a1d6"></i>
+          <i v-else-if="userInfo.gender == 1" class="iconfont icon-female" style="color:#fb7299"></i>
         </div>
         <div class="level">
           <i v-if="userInfo.level == 0" class="vanfont" style="color:#BFBFBF">&#xE6CB;</i>

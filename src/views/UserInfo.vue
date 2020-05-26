@@ -10,7 +10,7 @@
       @onClick="downloadApp"
     ></nav-bar>
     <userinfo-header :userInfo="userInfo">
-      <button slot="btn">编辑资料</button>
+      <button slot="btn" @click="showPop = true">编辑资料</button>
     </userinfo-header>
     <tab-card
       :videoList="this.videoList"
@@ -21,6 +21,9 @@
       <div slot="content">sss</div>
     </tab-card>
     <m-footer></m-footer>
+    <van-popup :overlay="false" class="pop" v-model="showPop" position="right">
+      <user-space @logOut="logout" @isShow="isShowPop" :userDetail="userDetail"></user-space>
+    </van-popup>
   </div>
 </template>
 
@@ -29,9 +32,11 @@ import NavBar from "@/components/common/NavBar.vue";
 import UserinfoHeader from "@/components/common/UserinfoHeader.vue";
 import TabCard from "@/components/common/TabCard.vue";
 import MFooter from "@/components/common/MFooter.vue";
+import UserSpace from "@/components/common/UserSpace.vue";
 export default {
   data() {
     return {
+      showPop: false,
       dynamicList: [
         {
           id: 0,
@@ -45,7 +50,7 @@ export default {
         {
           id: 1,
           userImg: "https://img.yzcdn.cn/vant/cat.jpeg",
-          userBadge: 2,
+          userBadge: 1,
           userName: "Ice空帆船",
           userExtra: "02-23",
           isSupport: true,
@@ -105,10 +110,11 @@ export default {
         likesNum: "48.2万",
         btnType: false,
         name: "Ice空帆船",
-        gender: 2,
+        gender: 1,
         level: 6,
         isVip: true,
         vipType: "年度大会员",
+        isVerify: true,
         verifyImg:
           "http://s1.hdslb.com/bfs/static/jinkela/mstation-h5/asserts/icon_Certification_enterprise.png",
         verifyContent: "bilibili UP主认证：bilibili 知名游戏UP主",
@@ -124,6 +130,14 @@ export default {
             text: "uid12831784"
           }
         ]
+      },
+      userDetail: {
+        avatarImg: "https://img.yzcdn.cn/vant/cat.jpeg",
+        name: "Ice空帆船",
+        uid: 172738743,
+        gender: 0,
+        birthday: "07-23",
+        signature: "报道先生归也，杏花春雨江南"
       }
     };
   },
@@ -131,18 +145,28 @@ export default {
     NavBar,
     UserinfoHeader,
     TabCard,
-    MFooter
+    MFooter,
+    UserSpace
   },
   methods: {
     downloadApp() {
-      // window.open(
-      //   "https://dl.hdslb.com/mobile/latest/iBiliPlayer-bili.apk",
-      //   "_blank"
-      // );
+      console.log("下载App");
+    },
+    isShowPop() {
+      this.showPop = false;
+    },
+    logout() {
+      console.log("退出登录");
     }
   }
 };
 </script>
 
 <style lang="less" scoped>
+.pop {
+  background: #f4f4f4;
+  height: 100%;
+  width: 100%;
+  top: 100vw;
+}
 </style>

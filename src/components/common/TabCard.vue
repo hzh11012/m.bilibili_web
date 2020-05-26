@@ -18,11 +18,11 @@
                     </i>
                     <i class="badge">
                       <img
-                        v-if="item.userBadge == 1"
+                        v-if="item.userBadge == 0"
                         src="@/assets/icon_Certification_official.png"
                       />
                       <img
-                        v-if="item.userBadge == 2"
+                        v-else-if="item.userBadge == 1"
                         src="@/assets/icon_Certification_enterprise.png"
                       />
                     </i>
@@ -76,7 +76,13 @@
         </a>
       </div>
       <div v-if="value == 2" class="albumList">
-        <a :href="item.albumHref" target="_blank" class="albumItem" v-for="item in albumList" :key="item.id">
+        <a
+          :href="item.albumHref"
+          target="_blank"
+          class="albumItem"
+          v-for="item in albumList"
+          :key="item.id"
+        >
           <div class="albumCover">
             <img class="albumImg" :src="item.albumImg" />
             <span class="durationPages">{{item.durationPages}}</span>
@@ -102,10 +108,10 @@
 
 <script>
 export default {
-  props: ["videoList","albumList","dynamicList"],
+  props: ["videoList", "albumList", "dynamicList"],
   data() {
     return {
-      value: 0,
+      value: 0
     };
   },
   methods: {

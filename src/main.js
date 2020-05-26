@@ -8,15 +8,13 @@ import './assets/bilibili-icon/vanfont.css'
 import './assets/iconfont/iconfont.css'
 Vue.config.productionTip = false
 
-import { Field, DropdownMenu, DropdownItem, Button, CellGroup, Toast, Icon, Image as VanImage } from 'vant';
-Vue.use(CellGroup);
+import { Field, Button, Toast, Icon, Image as VanImage, Popup } from 'vant';
 Vue.use(Button);
-Vue.use(DropdownMenu);
-Vue.use(DropdownItem);
 Vue.use(Field);
 Vue.use(Toast);
 Vue.use(Icon);
 Vue.use(VanImage);
+Vue.use(Popup);
 
 
 //配置请求的根路径
