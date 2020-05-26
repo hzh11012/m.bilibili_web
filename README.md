@@ -58,7 +58,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   UserinfoHeader  | 注释  | 类型
  ---- | ----- | ------  
  userInfo  | 用户数据 | 对象 
-   | userInfo注释 | 
+ --  | userInfo注释 | --
  avatarImg  | 用户头像 | url 
  fansNum  | 粉丝数 | string 
  followNum  | 关注数 | string 
@@ -74,13 +74,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  verifyContent  | 认证内容 如：bilibili UP主认证：bilibili 知名游戏UP主 | string
  personDesc  | 个人简介描述 | string 
  tags  | 标签 数据对象 | 数组 
-    | 以下为插槽 | 
+ --  | 以下为插槽 | --
  btn  | 按钮插槽 |  
  
-   TabCard  | 注释  | 类型
+  TabCard  | 注释  | 类型
  ---- | ----- | ------  
  dynamicList  | 动态数据 | 数组 
-   | dynamicList注释 | 
+ --  | dynamicList注释 | --
  id  | 索引 | number 
  userImg  | 用户头像 | url 
  userBadge  | 用户认证类型 可选0无 1个人 2组织 | number 
@@ -88,9 +88,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  userExtra  | 用户动态中的时间戳等 | string 
  isSupport  | 该动态是否已经点赞 | boolean 
  TextorNum  | 点赞icon后的显示内容 赞or数量 | string 
-    |  | 
+ --  | -- | --
  videoList  | 视频数据 | 数组 
-   | videoList注释 | 
+ --  | videoList注释 | --
  id  | 索引 | number 
  videoHref  | 视频url | url 
  videoImg  | 视频封面 | url 
@@ -98,9 +98,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  videoTitle  | 视频标题 | string 
  viewNum  | 播放量 | number 
  danmuNum  | 弹幕数 | number 
-    |  | 
+ --  | -- | --
  albumList  | 相簿数据 | 数组 
-   | albumList注释 | 
+ --  | albumList注释 | --
  id  | 索引 | number 
  albumHref  | 相簿url | url 
  albumImg  | 相簿封面 | url 
