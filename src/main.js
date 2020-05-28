@@ -8,14 +8,24 @@ import './assets/bilibili-icon/vanfont.css'
 import './assets/iconfont/iconfont.css'
 Vue.config.productionTip = false
 
-import { Field, Button, Toast, Icon, Image as VanImage, Popup } from 'vant';
+import {
+  Field, Button, Toast, Icon, Image as VanImage, Popup
+  , Swipe, SwipeItem, List
+} from 'vant';
+
 Vue.use(Button);
 Vue.use(Field);
 Vue.use(Toast);
 Vue.use(Icon);
 Vue.use(VanImage);
 Vue.use(Popup);
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+Vue.use(List);
+import { Tab, Tabs } from 'vant';
 
+Vue.use(Tab);
+Vue.use(Tabs);
 
 //配置请求的根路径
 import axios from 'axios'

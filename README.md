@@ -121,3 +121,43 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  signature  | 用户个性签名 | string 
  --  | -- | --
  @logOut  | 退出登录 | 事件
+
+  Tabs  | 注释  | 类型
+ ---- | ----- | ------  
+ tabList  | 选项卡内容 | 对象
+ --  | tabList注释 | --
+ id  | id | num
+ title  | 选项卡标题 | string
+ to  | 选项卡href | url
+
+  ChanelTab  | 注释  | 类型
+ ---- | ----- | ------  
+ videoList  | 选项卡选中后展示的组件内容 | 数组对象
+ --  | videoList注释 | --
+ id  | id | num
+ title  | 组件内分类的标题 | string
+ video  | 该分类内的数据 | 数组对象
+ ---  | video注释 | ---
+ ---  | video注释 | ---
+ id  | 索引 | number 
+ videoHref  | 视频url | url 
+ videoImg  | 视频封面 | url 
+ videoTitle  | 视频标题 | string 
+ viewNum  | 播放量 | number 
+ danmuNum  | 弹幕数 | number 
+
+  HomeTablist  | 注释  | 类型
+ ---- | ----- | ------  
+ banners  | 首页轮播图 | 数组对象
+  --  | banners注释 | --
+ href  | 图片跳转链接 | url
+ imgurl  | 图片链接 | url
+  --  | -- | --
+ videoList  | 视频数据 | 数组对象
+  --  | videoList注释 | --
+ id  | id | num
+ videoHref  | 视频url | url 
+ videoImg  | 视频封面 | url 
+ videoTitle  | 视频标题 | string 
+ viewNum  | 播放量 | number 
+ danmuNum  | 弹幕数 | number 

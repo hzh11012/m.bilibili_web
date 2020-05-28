@@ -4,9 +4,9 @@
       hotSearch="api获取热搜关键词"
       avatarImg="https://img.yzcdn.cn/vant/cat.jpeg"
       btnTitle="下载 App"
-      leftHref
+      leftHref="#/home"
       middleHref
-      rightHref
+      rightHref="#/userinfo"
       @onClick="downloadApp"
     ></nav-bar>
     <userinfo-header :userInfo="userInfo">
