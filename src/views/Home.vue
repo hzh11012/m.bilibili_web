@@ -3,7 +3,6 @@
     <div class="header">
       <div class="header-box">
         <nav-bar
-          class="sss"
           hotSearch="api获取热搜关键词"
           avatarImg="https://img.yzcdn.cn/vant/cat.jpeg"
           btnTitle="下载 App"
@@ -18,7 +17,7 @@
       </div>
     </div>
     <div>
-      <home-tab :HomeTablist="HomeTablist" v-if="id ==0"></home-tab>
+      <home-tab :HomeTablist="HomeTablist" v-if="id==0"></home-tab>
       <chanel-tab :videoList="videoList" v-else></chanel-tab>
     </div>
   </div>
@@ -164,7 +163,7 @@ export default {
         videoList: [
           {
             id: 0,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -173,7 +172,7 @@ export default {
           },
           {
             id: 1,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -182,7 +181,7 @@ export default {
           },
           {
             id: 2,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -191,7 +190,7 @@ export default {
           },
           {
             id: 3,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -200,7 +199,7 @@ export default {
           },
           {
             id: 5,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -209,7 +208,7 @@ export default {
           },
           {
             id: 6,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -218,7 +217,7 @@ export default {
           },
           {
             id: 7,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -227,7 +226,7 @@ export default {
           },
           {
             id: 8,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -236,7 +235,7 @@ export default {
           },
           {
             id: 9,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -245,7 +244,7 @@ export default {
           },
           {
             id: 10,
-            videoHref: "",
+            videoHref: "#/video",
             videoImg:
               "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
             videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
@@ -253,7 +252,8 @@ export default {
             danmuNum: "1万"
           }
         ]
-      }
+      },
+      activeVideoId: 0
     };
   },
   methods: {

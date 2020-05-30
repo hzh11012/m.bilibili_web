@@ -6,6 +6,7 @@ import UserInfo from '@/views/UserInfo.vue'
 import Home from '@/views/Home.vue'
 import HomeTab from '../components/Home/HomeTab.vue'
 import ChanelTab from '../components/Home/ChanelTab.vue'
+import Video from '@/views/Video.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,6 +31,9 @@ const routes = [
   },
   {
     path: '/', redirect: '/home/home'
+  },
+  {
+    path: '/video', component: Video
   }
 ]
 

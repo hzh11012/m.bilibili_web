@@ -156,8 +156,23 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  videoList  | 视频数据 | 数组对象
   --  | videoList注释 | --
  id  | id | num
- videoHref  | 视频url | url 
+ videoHref  | 视频href | url 
  videoImg  | 视频封面 | url 
  videoTitle  | 视频标题 | string 
  viewNum  | 播放量 | number 
  danmuNum  | 弹幕数 | number 
+
+  VideoPlayer  | 注释  | 类型
+ ---- | ----- | ------  
+ videoDetail  | 视频的详情 | 对象
+  --  | videoDetail注释 | --
+ poseterUrl  | 预加载图片链接 | url
+ videoUrl  | 视频链接 | url
+ tuijian  | 推荐视频 | 对象
+  ---  | tuijian注释 | ---
+  ---  | tuijian注释 | ---
+ id  | id | num
+ imgUrl  | 封面图片链接 | url
+ title  | 标题 | string
+  --  | -- | --
+ @tuijianClick  | 播放推荐视频 | 事件 

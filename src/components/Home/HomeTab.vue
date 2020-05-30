@@ -4,10 +4,7 @@
       <van-swipe :autoplay="3000" :show-indicators="false">
         <van-swipe-item v-for="(item,index) in HomeTablist.banners" :key="index">
           <a :href="item.href">
-            <img
-              :src="item.imgurl"
-              class="bannersimg"
-            />
+            <img :src="item.imgurl" class="bannersimg" />
           </a>
         </van-swipe-item>
       </van-swipe>
@@ -15,7 +12,13 @@
     <van-list v-model="loading" :finished="finished" @load="onLoad">
       <div class="video-list-box">
         <div class="video-list">
-          <a class="v-card" :href="item.videoHref" v-for="item in HomeTablist.videoList" :key="item.id">
+          <a
+            class="v-card"
+            :href="item.videoHref"
+            @click="goVideo(item)"
+            v-for="item in HomeTablist.videoList"
+            :key="item.id"
+          >
             <div class="card">
               <img :src="item.videoImg" />
               <div class="count">
@@ -41,14 +44,14 @@
 <script>
 import FlowLoader from "@/components/common/FlowLoaderNo.vue";
 export default {
-  props:['HomeTablist'],
+  props: ["HomeTablist"],
   components: {
     FlowLoader
   },
   data() {
     return {
       loading: false,
-      finished: false,
+      finished: false
     };
   },
   methods: {
@@ -57,7 +60,9 @@ export default {
       // setTimeout 仅做示例，真实场景中一般为 ajax 请求
       setTimeout(() => {
         for (let i = 0; i < 10; i++) {
-          this.HomeTablist.videoList.push(this.HomeTablist.videoList.length + 1);
+          this.HomeTablist.videoList.push(
+            this.HomeTablist.videoList.length + 1
+          );
         } // 加载状态结束
         this.loading = false;
 
@@ -66,6 +71,9 @@ export default {
           this.finished = true;
         }
       }, 500);
+    },
+    goVideo(item) {
+      this.$store.commit("activeVideoId", item.id);
     }
   }
 };
