@@ -18,7 +18,8 @@
       @pinglun="pinglun"
     ></video-info>
     <video-related :videoRelated="videoDetail.VideoRelated"></video-related>
-    <video-comments :VideoComments="videoDetail.VideoComments"></video-comments>
+    <video-comments class="comments" :VideoComments="videoDetail.VideoComments"></video-comments>
+    <pagego-top></pagego-top>
   </div>
 </template>
 
@@ -28,13 +29,15 @@ import VideoPlayer from "@/components/Video/VideoPlayer.vue";
 import VideoInfo from "@/components/Video/VideoInfo.vue";
 import VideoRelated from "@/components/Video/VideoRelated.vue";
 import VideoComments from "@/components/Video/VideoComments.vue";
+import PagegoTop from "@/components/common/PagegoTop.vue";
 export default {
   components: {
     NavBar,
     VideoPlayer,
     VideoInfo,
     VideoRelated,
-    VideoComments
+    VideoComments,
+    PagegoTop
   },
   data() {
     return {
@@ -161,7 +164,7 @@ export default {
             {
               userImg: require("@/assets/picture/2.jpg"),
               userName: "永远的MG",
-              userHref:'',
+              userHref: "",
               content:
                 "川建国暴露的时候，没有一个B站用户是无辜的[doge][doge][doge]",
               time: "5-28"
@@ -206,7 +209,11 @@ export default {
       console.log("分享");
     },
     pinglun() {
-      console.log("滑动到到评论组件");
+      //滑动到评论处
+      let el = document.getElementsByClassName("comments")[0];
+      this.$nextTick(function() {
+        window.scrollTo({ behavior: "smooth", top: el.offsetTop });
+      });
     }
   },
   created() {
