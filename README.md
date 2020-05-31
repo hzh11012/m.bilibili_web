@@ -176,3 +176,72 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  title  | 标题 | string
   --  | -- | --
  @tuijianClick  | 播放推荐视频 | 事件 
+
+  VideoInfo  | 注释  | 类型
+ ---- | ----- | ------ 
+ VideoInfo  | 视频的详情 | 对象
+  --  | VideoInfo注释 | --
+ isHot  | 是否热门 | boolean
+ isActivity  | 是否活动 | boolean
+ isAllow  | 是否允许转载 | boolean
+ upName  | up名字 | string
+ viewNum  | 播放量 | string
+ danmuNum  | 弹幕数 | string
+ time  | 发布时间 | string
+ desc  | 视频描述 | string
+ pinglun  | 视频评论数 | string
+ channelPage  | 视频所属的类型 | 数组对象
+  ---  | channelPage注释 | ---
+  ---  | channelPage注释 | ---
+ second  | 第二分类 | string
+ third  | 第三分类 | string
+  --  | -- | --
+ tags  | 视频所属标签 | 数组对象
+  ---  | tags注释 | ---
+  ---  | tags注释 | ---
+ id  | id | number
+ tagName  | 标签名称 | string
+ href  | 标签指向的链接 | href
+  --  | -- | --
+ @shoucang  | 收藏按钮事件 | 事件 
+ @huancun  | 缓存按钮事件 | 事件 
+ @fenxiang  | 分享按钮事件 | 事件 
+ @pinglun  | 评论按钮事件 | 事件 
+
+  videoCard  | 注释  | 类型
+ ---- | ----- | ------ 
+ video  | 视频的详情 | 数组对象
+  --  | video注释 | --
+ id  | id | num
+ videoHref  | 视频href | href 
+ videoImg  | 视频封面 | url 
+ videoTitle  | 视频标题 | string 
+ viewNum  | 播放量 | number 
+ danmuNum  | 弹幕数 | number 
+
+
+  VideoRelated  | 注释  | 类型
+ ---- | ----- | ------ 
+ videoRelated  | 视频的详情 | 数组对象
+  --  | videoRelated注释 | --
+ id  | id | num
+ videoHref  | 视频href | href 
+ videoImg  | 视频封面 | url 
+ videoTitle  | 视频标题 | string 
+ viewNum  | 播放量 | number 
+ danmuNum  | 弹幕数 | number 
+
+  VideoComments  | 注释  | 类型
+ ---- | ----- | ------ 
+ VideoComments  | 视频评论 | 对象
+  --  | VideoComments注释 | --
+ nums  | 评论数 | num
+ avatarImg  | 个人头像链接 | url
+ comment  | 评论详情 | 数组对象
+  --  | comment注释 | --
+  --  | comment注释 | --
+ userHref  | 用户空间href | href 
+ userName  | 用户姓名 | string 
+ content  | 评论内容 | string 
+ time  | 评论时间 | string 
+

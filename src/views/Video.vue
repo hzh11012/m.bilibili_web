@@ -1,40 +1,175 @@
 <template>
-  <div>
+  <div class="main">
     <nav-bar
       hotSearch="api获取热搜关键词"
-      avatarImg="https://img.yzcdn.cn/vant/cat.jpeg"
+      :avatarImg="userImg"
       btnTitle="下载 App"
-      leftHref="#/home/chanel"
+      leftHref="/"
       middleHref
       rightHref="#/userinfo"
       @onClick="downloadApp"
     ></nav-bar>
     <video-player @tuijianClick="tuijianClick" :videoDetail="videoDetail"></video-player>
+    <video-info
+      :videoInfo="videoDetail.videoInfo"
+      @shoucang="shoucang"
+      @huancun="huancun"
+      @fenxiang="fenxiang"
+      @pinglun="pinglun"
+    ></video-info>
+    <video-related :videoRelated="videoDetail.VideoRelated"></video-related>
+    <video-comments :VideoComments="videoDetail.VideoComments"></video-comments>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/common/NavBar.vue";
 import VideoPlayer from "@/components/Video/VideoPlayer.vue";
+import VideoInfo from "@/components/Video/VideoInfo.vue";
+import VideoRelated from "@/components/Video/VideoRelated.vue";
+import VideoComments from "@/components/Video/VideoComments.vue";
 export default {
   components: {
     NavBar,
-    VideoPlayer
+    VideoPlayer,
+    VideoInfo,
+    VideoRelated,
+    VideoComments
   },
   data() {
     return {
       videoDetail: {
-        poseterUrl:
-          "http://i1.hdslb.com/bfs/archive/462d72853d00d4b3c9ed98990853143fbf80d561.jpg@480w_270h_1c",
+        poseterUrl: require("@/assets/picture/5.jpg"),
         videoUrl:
           "https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4",
         tuijian: {
           id: 25,
-          imgUrl:
-            "http://i0.hdslb.com/bfs/archive/4f07d00e9908c93596043ba326d3084c8f14ff92.jpg",
-          title: "再一次带来了的YES！OK！【AKB48TeamSH栗子沈莹】"
+          imgUrl: require("@/assets/picture/6.jpg"),
+          title:
+            "慎入！前方极度妩媚 那些你惹不起的战斗天使 穿上高跟鞋攻击力翻倍！"
+        },
+        videoInfo: {
+          isHot: true, //是否热门
+          isActivity: true, //是否活动
+          isAllow: true, //是否允许转载
+          title: "穿什么高跟鞋呀，光脚攻击翻倍哦！",
+          upName: "Ice空帆船",
+          viewNum: "298.3万次观看",
+          danmuNum: "2.7万弹幕",
+          time: "05-29",
+          desc:
+            "一首老歌，听过的人可能已不再年轻，但是希望我们的心能永葆青春！",
+          tags: [
+            { id: 0, tagName: "守望先锋", href: "/" },
+            { id: 1, tagName: "彩虹六号", href: "/" },
+            { id: 2, tagName: "竞技", href: "/" },
+            { id: 3, tagName: "上勾拳", href: "/" },
+            { id: 4, tagName: "铁拳", href: "/" }
+          ],
+          pinglun: "1162评论",
+          channelPage: {
+            second: "生活",
+            third: "国产原创相关"
+          }
+        },
+        VideoRelated: [
+          {
+            id: 0,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 1,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 2,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 3,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 4,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 5,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 6,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 7,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 9,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          },
+          {
+            id: 8,
+            videoHref: "",
+            videoImg: require("@/assets/picture/1.jpg"),
+            videoTitle: "娶妻若如此，枸杞也难医",
+            viewNum: "180.6万",
+            danmuNum: "3587"
+          }
+        ],
+        VideoComments: {
+          nums: 7413,
+          avatarImg: require("@/assets/picture/m.jpg"),
+          comment: [
+            {
+              userImg: require("@/assets/picture/2.jpg"),
+              userName: "永远的MG",
+              userHref:'',
+              content:
+                "川建国暴露的时候，没有一个B站用户是无辜的[doge][doge][doge]",
+              time: "5-28"
+            }
+          ]
         }
-      }
+      },
+      userImg: require("@/assets/picture/m.jpg")
     };
   },
   methods: {
@@ -50,17 +185,28 @@ export default {
       console.log(id); //
       //这里调用getVideoDetail()方法 进行获取
       this.videoDetail = {
-        poseterUrl:
-          "http://i0.hdslb.com/bfs/archive/4f07d00e9908c93596043ba326d3084c8f14ff92.jpg",
+        poseterUrl: require("@/assets/picture/6.jpg"),
         videoUrl:
           "https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209104902N3v5Vpxuvb.mp4",
         tuijian: {
           id: 45,
-          imgUrl:
-            "http://i1.hdslb.com/bfs/archive/462d72853d00d4b3c9ed98990853143fbf80d561.jpg@480w_270h_1c",
-          title: "再一次带来了的YES！OK！【AKB48TeamSH栗子沈莹】"
+          imgUrl: require("@/assets/picture/5.jpg"),
+          title:
+            "慎入！前方极度妩媚 那些你惹不起的战斗天使 穿上高跟鞋攻击力翻倍！"
         }
       };
+    },
+    shoucang() {
+      console.log("收藏");
+    },
+    huancun() {
+      console.log("缓存");
+    },
+    fenxiang() {
+      console.log("分享");
+    },
+    pinglun() {
+      console.log("滑动到到评论组件");
     }
   },
   created() {
@@ -70,4 +216,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.main {
+  height: auto;
+  width: 100%;
+  background: white;
+}
 </style>

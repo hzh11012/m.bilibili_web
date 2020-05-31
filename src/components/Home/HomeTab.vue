@@ -12,28 +12,7 @@
     <van-list v-model="loading" :finished="finished" @load="onLoad">
       <div class="video-list-box">
         <div class="video-list">
-          <a
-            class="v-card"
-            :href="item.videoHref"
-            @click="goVideo(item)"
-            v-for="item in HomeTablist.videoList"
-            :key="item.id"
-          >
-            <div class="card">
-              <img :src="item.videoImg" />
-              <div class="count">
-                <span>
-                  <i class="vanfont">&#xE6E6;</i>
-                  {{item.viewNum}}
-                </span>
-                <span>
-                  <i class="vanfont">&#xE6E7;</i>
-                  {{item.danmuNum}}
-                </span>
-              </div>
-            </div>
-            <p class="title van-multi-ellipsis--l2">{{item.videoTitle}}</p>
-          </a>
+          <video-card v-for="(item,index) in HomeTablist.videoList" :video="item" :key="index"></video-card>
         </div>
       </div>
     </van-list>
@@ -42,11 +21,13 @@
 </template>
 
 <script>
+import videoCard from "@/components/Video/videoCards/videoCard.vue";
 import FlowLoader from "@/components/common/FlowLoaderNo.vue";
 export default {
   props: ["HomeTablist"],
   components: {
-    FlowLoader
+    FlowLoader,
+    videoCard
   },
   data() {
     return {
@@ -60,9 +41,14 @@ export default {
       // setTimeout 仅做示例，真实场景中一般为 ajax 请求
       setTimeout(() => {
         for (let i = 0; i < 10; i++) {
-          this.HomeTablist.videoList.push(
-            this.HomeTablist.videoList.length + 1
-          );
+          this.HomeTablist.videoList.push({
+            id: i,
+            videoHref: "#/video",
+            videoImg: require("@/assets/picture/0.jpg"),
+            videoTitle: "少卿这么可爱，不如我们……",
+            viewNum: "31.3万",
+            danmuNum: "435"
+          });
         } // 加载状态结束
         this.loading = false;
 
@@ -71,9 +57,6 @@ export default {
           this.finished = true;
         }
       }, 500);
-    },
-    goVideo(item) {
-      this.$store.commit("activeVideoId", item.id);
     }
   }
 };
@@ -121,28 +104,29 @@ export default {
             width: 100%;
             height: 100%;
           }
-        }
-        .count {
-          box-sizing: border-box;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          font-size: 3.2vw;
-          padding: 1.33333vw 1.6vw;
-          display: flex;
-          color: white;
-          justify-content: space-between;
-          background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
-          span {
+          .count {
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 3.2vw;
+            padding: 1.33333vw 1.6vw;
             display: flex;
-            align-items: center;
-            i {
-              margin-right: 1.33333vw;
-              font-size: 3.333vw;
+            color: white;
+            justify-content: space-between;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
+            span {
+              display: flex;
+              align-items: center;
+              i {
+                margin-right: 1.33333vw;
+                font-size: 3.333vw;
+              }
             }
           }
         }
+
         .title {
           margin: 0;
           font-size: 3.2vw;

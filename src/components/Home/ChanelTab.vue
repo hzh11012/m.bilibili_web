@@ -7,22 +7,7 @@
             <span>{{item.title}}</span>
           </div>
           <div class="card-box">
-            <a :href="item1.videoHref" v-for="item1 in item.video" :key="item1.id">
-              <div class="card">
-                <img :src="item1.videoImg" />
-                <div class="count">
-                  <span>
-                    <i class="vanfont">&#xE6E6;</i>
-                    {{item1.viewNum}}
-                  </span>
-                  <span>
-                    <i class="vanfont">&#xE6E7;</i>
-                    {{item1.danmuNum}}
-                  </span>
-                </div>
-              </div>
-              <p class="title van-multi-ellipsis--l2">{{item1.videoTitle}}</p>
-            </a>
+            <video-card v-for="item1 in item.video" :video="item1" :key="item1.id"></video-card>
           </div>
         </div>
       </div>
@@ -32,35 +17,37 @@
 </template>
 
 <script>
+import videoCard from "../Video/videoCards/videoCard";
 import MFooter from "@/components/common/MFooter.vue";
 export default {
-  props:['videoList'],
+  props: ["videoList"],
   data() {
     return {
-      list: [],
-      loading: false,
-      finished: false
+      // list: [],
+      // loading: false,
+      // finished: false
     };
   },
   methods: {
-    onLoad() {
-      // 异步更新数据
-      // setTimeout 仅做示例，真实场景中一般为 ajax 请求
-      setTimeout(() => {
-        for (let i = 0; i < 10; i++) {
-          this.list.push(this.list.length + 1);
-        } // 加载状态结束
-        this.loading = false;
+    // onLoad() {
+    //   // 异步更新数据
+    //   // setTimeout 仅做示例，真实场景中一般为 ajax 请求
+    //   setTimeout(() => {
+    //     for (let i = 0; i < 10; i++) {
+    //       this.list.push(this.list.length + 1);
+    //     } // 加载状态结束
+    //     this.loading = false;
 
-        // 数据全部加载完成
-        if (this.list.length >= 50) {
-          this.finished = true;
-        }
-      }, 500);
-    }
+    //     // 数据全部加载完成
+    //     if (this.list.length >= 50) {
+    //       this.finished = true;
+    //     }
+    //   }, 500);
+    // }
   },
   components: {
-    MFooter
+    MFooter,
+    videoCard
   }
 };
 </script>
@@ -83,56 +70,6 @@ export default {
       .card-box {
         display: flex;
         flex-wrap: wrap;
-        a {
-          box-sizing: border-box;
-          width: 50%;
-          padding: 2.13333vw 1.33333vw;
-          display: inline-block;
-          .card {
-            position: relative;
-            background-color: #f3f3f3;
-            background-image: url(../../assets/loading.png);
-            background-repeat: no-repeat;
-            background-position: 50%;
-            border-radius: 0.53333vw;
-            overflow: hidden;
-            height: 25.944vw;
-            img {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-            }
-          }
-          .count {
-            box-sizing: border-box;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            font-size: 3.2vw;
-            padding: 1.33333vw 1.6vw;
-            display: flex;
-            color: white;
-            justify-content: space-between;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), transparent);
-            span {
-              display: flex;
-              align-items: center;
-              i {
-                margin-right: 1.33333vw;
-                font-size: 3.333vw;
-              }
-            }
-          }
-          .title {
-            margin: 0;
-            font-size: 3.2vw;
-            color: #212121;
-            margin-top: 1.6vw;
-          }
-        }
       }
     }
   }

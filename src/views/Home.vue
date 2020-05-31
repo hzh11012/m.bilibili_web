@@ -4,9 +4,9 @@
       <div class="header-box">
         <nav-bar
           hotSearch="api获取热搜关键词"
-          avatarImg="https://img.yzcdn.cn/vant/cat.jpeg"
+          :avatarImg="userImg"
           btnTitle="下载 App"
-          leftHref="#/home/chanel"
+          leftHref="/"
           middleHref
           rightHref="#/userinfo"
           @onClick="downloadApp"
@@ -66,37 +66,34 @@ export default {
           video: [
             {
               id: 0,
-              videoHref: "",
-              videoImg:
-                "http://i2.hdslb.com/bfs/archive/502786af2305ac0adb0730c648c4ea6da963ba87.jpg@480w_270h_1c.webp",
-              videoTitle: "佟大掌柜想要我搞对象？？？",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/1.jpg"),
+              videoTitle: "娶妻若如此，枸杞也难医",
               viewNum: "180.6万",
               danmuNum: "3587"
             },
             {
               id: 1,
-              videoHref: "",
-              videoImg:
-                "http://i2.hdslb.com/bfs/archive/44055b53295e75ef4f0715553b505368d93bb6bf.jpg@480w_270h_1c.webp",
-              videoTitle: "警察：这就是你推理出来的犯人？？？",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/2.jpg"),
+              videoTitle: "重新认识下！我们叫肤白貌美！风情万种！一眼误终生！",
               viewNum: "300.7万",
               danmuNum: "5918"
             },
             {
               id: 2,
-              videoHref: "",
-              videoImg:
-                "http://i0.hdslb.com/bfs/archive/d7eb3ce844b014b60ef7182b3c8e7684013a7799.jpg@480w_270h_1c.webp",
-              videoTitle: "大 学 返 校 现 状",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/3.jpg"),
+              videoTitle: "这大概就是东方之美了",
               viewNum: "157.2万",
               danmuNum: "5159"
             },
             {
               id: 3,
-              videoHref: "",
-              videoImg:
-                "http://i2.hdslb.com/bfs/archive/8688e32d36213b1dc198c573faf3dfe7b6a2e4c3.jpg@480w_270h_1c",
-              videoTitle: "【杂乱无章】谈恋爱之后，你会失去很多朋友。",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/4.jpg"),
+              videoTitle:
+                "这首《Monsters》，如今治愈了多少人！！！ 怪       物 ℳ₯㎕_Monsters",
               viewNum: "85.9万",
               danmuNum: "7781"
             }
@@ -108,36 +105,32 @@ export default {
           video: [
             {
               id: 0,
-              videoHref: "",
-              videoImg:
-                "http://i2.hdslb.com/bfs/archive/502786af2305ac0adb0730c648c4ea6da963ba87.jpg@480w_270h_1c.webp",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/4.jpg"),
               videoTitle: "佟大掌柜想要我搞对象？？？",
               viewNum: "180.6万",
               danmuNum: "3587"
             },
             {
               id: 1,
-              videoHref: "",
-              videoImg:
-                "http://i2.hdslb.com/bfs/archive/44055b53295e75ef4f0715553b505368d93bb6bf.jpg@480w_270h_1c.webp",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/3.jpg"),
               videoTitle: "警察：这就是你推理出来的犯人？？？",
               viewNum: "300.7万",
               danmuNum: "5918"
             },
             {
               id: 2,
-              videoHref: "",
-              videoImg:
-                "http://i0.hdslb.com/bfs/archive/d7eb3ce844b014b60ef7182b3c8e7684013a7799.jpg@480w_270h_1c.webp",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/2.jpg"),
               videoTitle: "大 学 返 校 现 状",
               viewNum: "157.2万",
               danmuNum: "5159"
             },
             {
               id: 3,
-              videoHref: "",
-              videoImg:
-                "http://i2.hdslb.com/bfs/archive/8688e32d36213b1dc198c573faf3dfe7b6a2e4c3.jpg@480w_270h_1c",
+              videoHref: "#/video",
+              videoImg: require("@/assets/picture/1.jpg"),
               videoTitle: "【杂乱无章】谈恋爱之后，你会失去很多朋友。",
               viewNum: "85.9万",
               danmuNum: "7781"
@@ -148,112 +141,18 @@ export default {
       HomeTablist: {
         banners: [
           {
-            href:
-              "https://www.bilibili.com/blackboard/topic/activity-C3H4ceFg8.html",
-            imgurl:
-              "http://i0.hdslb.com/bfs/archive/1414f4bf8141d3d20ce4d829a5182c1e1f42ad37.jpg@480w_270h"
+            href: "",
+            imgurl: require("@/assets/picture/h1.jpg")
           },
           {
-            href:
-              "https://www.bilibili.com/blackboard/topic/activity-iS90SwSbP.html",
-            imgurl:
-              "http://i0.hdslb.com/bfs/archive/3413a50a37faa77ffdae8c3d22dffcfabe690709.jpg@480w_270h"
+            href: "",
+            imgurl: require("@/assets/picture/h2.jpg")
           }
         ],
-        videoList: [
-          {
-            id: 0,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 1,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 2,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 3,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 5,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 6,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 7,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 8,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 9,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          },
-          {
-            id: 10,
-            videoHref: "#/video",
-            videoImg:
-              "http://i0.hdslb.com/bfs/archive/71dd7e2d957cc489b0ebb699f765d5c7e438ceea.jpg@480w_270h_1c",
-            videoTitle: "《入海》bilibili X 毛不易 | 跃入人海，各有风雨灿烂",
-            viewNum: "195.9万",
-            danmuNum: "1万"
-          }
-        ]
+        videoList: []
       },
-      activeVideoId: 0
+      activeVideoId: 0,
+      userImg: require("@/assets/picture/m.jpg")
     };
   },
   methods: {
