@@ -149,7 +149,7 @@ export default {
           this.model.username == "123456" &&
           this.model.password == "123456"
         ) {
-          let that =this;
+          let that = this;
           setTimeout(function() {
             that.$router.push("/home/home");
           }, 2500);

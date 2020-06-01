@@ -5,7 +5,7 @@
       :avatarImg="userInfo.avatarImg"
       btnTitle="下载 App"
       leftHref="/home"
-      middleHref="/home"
+      middleHref="/search"
       rightHref="/userinfo"
       @onClick="downloadApp"
     ></nav-bar>

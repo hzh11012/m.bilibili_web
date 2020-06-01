@@ -275,5 +275,25 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  danmuNum  | 弹幕数 | string
  videohref  | 视频链接 | href
 
+  SearchHead  | 注释  | 类型
+ ---- | ----- | ------ 
+ @search  | 搜索事件 | event
+ placeholder  | placeholder显示的热搜词 | string
+ @inputChange  | 检查输入的值 | event
 
+  SearchHot  | 注释  | 类型
+ ---- | ----- | ------ 
+ hotWord  | 大家都在搜（热搜词） | 数组对象
+  --  | hotWord注释 | --
+ value  | 热搜词value | string
+  --  | -- | --
+ @onClick  | 点击热搜词进行搜索 | event
 
+  SearchHistory  | 注释  | 类型
+ ---- | ----- | ------ 
+ historyWord  | 历史记录 | 数组对象
+  --  | historyWord注释 | --
+ value  | 历史记录value | string
+  --  | -- | --
+ @clearHistory  | 清空历史记录localStorage | event
+ @onClick  | 点击热搜词进行搜索 | event

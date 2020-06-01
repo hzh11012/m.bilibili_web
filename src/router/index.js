@@ -8,6 +8,8 @@ import HomeTab from '../components/Home/HomeTab.vue'
 import ChanelTab from '../components/Home/ChanelTab.vue'
 import Video from '@/views/Video.vue'
 import Tag from '@/views/Tag.vue'
+import Search from '@/views/Search.vue'
+import SearchResult from '@/views/SearchResult.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -36,6 +38,13 @@ const routes = [
   {
     path: '/tag', component: Tag
   },
+  {
+    path: '/search', component: Search
+  },
+  {
+    path: '/searchresult', component: SearchResult
+  },
+
 ]
 
 

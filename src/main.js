@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 
 import {
   Field, Button, Toast, Icon, Image as VanImage, Popup
-  , Swipe, SwipeItem, List, Slider
+  , Swipe, SwipeItem, List, Slider, Sticky
 } from 'vant';
 
 Vue.use(Button);
@@ -23,6 +23,7 @@ Vue.use(Swipe);
 Vue.use(SwipeItem);
 Vue.use(List);
 Vue.use(Slider);
+Vue.use(Sticky);
 
 //配置请求的根路径
 import axios from 'axios'
