@@ -4,9 +4,9 @@
       hotSearch="api获取热搜关键词"
       :avatarImg="userImg"
       btnTitle="下载 App"
-      leftHref="/"
-      middleHref
-      rightHref="#/userinfo"
+      leftHref="/home"
+      middleHref="/home"
+      rightHref="/userinfo"
       @onClick="downloadApp"
     ></nav-bar>
     <video-player @tuijianClick="tuijianClick" :videoDetail="videoDetail"></video-player>
@@ -52,6 +52,7 @@ export default {
             "慎入！前方极度妩媚 那些你惹不起的战斗天使 穿上高跟鞋攻击力翻倍！"
         },
         videoInfo: {
+          to: "/userinfo", //up跳转链接
           isHot: true, //是否热门
           isActivity: true, //是否活动
           isAllow: true, //是否允许转载
@@ -63,11 +64,11 @@ export default {
           desc:
             "一首老歌，听过的人可能已不再年轻，但是希望我们的心能永葆青春！",
           tags: [
-            { id: 0, tagName: "守望先锋", href: "/" },
-            { id: 1, tagName: "彩虹六号", href: "/" },
-            { id: 2, tagName: "竞技", href: "/" },
-            { id: 3, tagName: "上勾拳", href: "/" },
-            { id: 4, tagName: "铁拳", href: "/" }
+            { id: 0, tagName: "守望先锋", href: "/tag" },
+            { id: 1, tagName: "彩虹六号", href: "/tag" },
+            { id: 2, tagName: "竞技", href: "/tag" },
+            { id: 3, tagName: "上勾拳", href: "/tag" },
+            { id: 4, tagName: "铁拳", href: "/tag" }
           ],
           pinglun: "1162评论",
           channelPage: {
@@ -78,7 +79,7 @@ export default {
         VideoRelated: [
           {
             id: 0,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -86,7 +87,7 @@ export default {
           },
           {
             id: 1,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -94,7 +95,7 @@ export default {
           },
           {
             id: 2,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -102,7 +103,7 @@ export default {
           },
           {
             id: 3,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -110,7 +111,7 @@ export default {
           },
           {
             id: 4,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -118,7 +119,7 @@ export default {
           },
           {
             id: 5,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -126,7 +127,7 @@ export default {
           },
           {
             id: 6,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -134,7 +135,7 @@ export default {
           },
           {
             id: 7,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -142,7 +143,7 @@ export default {
           },
           {
             id: 9,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -150,7 +151,7 @@ export default {
           },
           {
             id: 8,
-            videoHref: "",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
             viewNum: "180.6万",
@@ -161,14 +162,6 @@ export default {
           nums: 7413,
           avatarImg: require("@/assets/picture/m.jpg"),
           comment: [
-            {
-              userImg: require("@/assets/picture/2.jpg"),
-              userName: "永远的MG",
-              userHref: "",
-              content:
-                "川建国暴露的时候，没有一个B站用户是无辜的[doge][doge][doge]",
-              time: "5-28"
-            }
           ]
         }
       },
@@ -187,17 +180,6 @@ export default {
       this.$store.commit("activeVideoId", id);
       console.log(id); //
       //这里调用getVideoDetail()方法 进行获取
-      this.videoDetail = {
-        poseterUrl: require("@/assets/picture/6.jpg"),
-        videoUrl:
-          "https://stream7.iqilu.com/10339/upload_transcode/202002/09/20200209104902N3v5Vpxuvb.mp4",
-        tuijian: {
-          id: 45,
-          imgUrl: require("@/assets/picture/5.jpg"),
-          title:
-            "慎入！前方极度妩媚 那些你惹不起的战斗天使 穿上高跟鞋攻击力翻倍！"
-        }
-      };
     },
     shoucang() {
       console.log("收藏");

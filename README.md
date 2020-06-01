@@ -94,7 +94,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  id  | 索引 | number 
  videoHref  | 视频url | url 
  videoImg  | 视频封面 | url 
- durationTime  | 视频时间 | string 
+ durationTime  | 视频时间 | number 
  videoTitle  | 视频标题 | string 
  viewNum  | 播放量 | number 
  danmuNum  | 弹幕数 | number 
@@ -244,4 +244,36 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  userName  | 用户姓名 | string 
  content  | 评论内容 | string 
  time  | 评论时间 | string 
+
+  TagInfo  | 注释  | 类型
+ ---- | ----- | ------ 
+ tagInfo  | 标签数组 | 数组对象
+  --  | tagInfo注释 | --
+ tagImg  | 标签图片 | url
+ tagName  | 标签名字 | string
+ followNum  | 关注数 | num
+ relatedNum  | 相关视频数 | num
+
+  TagList  | 注释  | 类型
+ ---- | ----- | ------ 
+ tagList  | 标签数组 | 数组对象
+  --  | tagList注释 | --
+ id  | id | num
+ tagName  | 标签名字 | string
+ tagHref  | 标签链接 | href
+
+  TagRelatedvideo  | 注释  | 类型
+ ---- | ----- | ------ 
+ relatedList  | 标签数组 | 数组对象
+  --  | relatedList注释 | --
+ id  | id | num
+ videoImg  | 视频poster | url
+ duration  | 视频时长 | number
+ title  | 视频标题 | string
+ authorName  | 作者名称 | string
+ viewNum  | 观看数 | string
+ danmuNum  | 弹幕数 | string
+ videohref  | 视频链接 | href
+
+
 

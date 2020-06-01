@@ -5,7 +5,7 @@ html, body, #app {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif";
+    font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
     background-color: #f4f4f4;
 }
 body * {

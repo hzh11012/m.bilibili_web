@@ -17,12 +17,12 @@
           >{{videoInfo.title}}</h1>
         </div>
         <div class="right" :class="rotate?'rotate':''" @click="rotateAndshow">
-          <van-icon size="19" color="#999999" name="arrow-down" />
+          <van-icon size="5.278vw" color="#999999" name="arrow-down" />
         </div>
         <div class="clear"></div>
       </div>
       <div class="data">
-        <a href class="up">{{videoInfo.upName}}</a>
+        <router-link to="videoInfo.to" class="up">{{videoInfo.upName}}</router-link>
         <span class="viewNum">{{videoInfo.viewNum}}</span>
         <span class="danmuNum">{{videoInfo.danmuNum}}</span>
         <span class="time">{{videoInfo.time}}</span>
@@ -34,14 +34,14 @@
         </p>
         <p class="desc">{{videoInfo.desc}}</p>
         <p class="channel">
-          <a href="/">主页</a>
+          <router-link to="/home">主页</router-link>
           <span>></span>
-          <a href="javascript:void(0);">{{videoInfo.channelPage.second}}</a>
+          <router-link to="/home">{{videoInfo.channelPage.second}}</router-link>
           <span>></span>
-          <a href="javascript:void(0);">{{videoInfo.channelPage.third}}</a>
+          <router-link to="/home">{{videoInfo.channelPage.third}}</router-link>
         </p>
         <div class="tags">
-          <a :href="item.href" v-for="item in videoInfo.tags" :key="item.id">{{item.tagName}}</a>
+          <router-link :to="item.href" v-for="item in videoInfo.tags" :key="item.id">{{item.tagName}}</router-link>
         </div>
       </div>
     </div>
@@ -78,14 +78,6 @@ export default {
     return {
       rotate: false,
       isShow: false,
-      videoInfos: {
-        ishot: true,
-        isActivity: true,
-        upName: "某幻君",
-        viewNum: "298.3万次观看",
-        danmuNum: "2.7万弹幕",
-        time: "05-29"
-      },
       foldheight: 0
     };
   },
@@ -114,7 +106,7 @@ export default {
   },
   mounted() {
     this.$nextTick(e => {
-      this.foldheight = this.$refs.fold.offsetHeight + "px";
+      this.foldheight = this.$refs.fold.offsetHeight / 3.6 + "vw";
       this.$refs.fold.style.height = 0;
     });
   }

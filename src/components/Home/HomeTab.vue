@@ -3,9 +3,9 @@
     <div class="swipe">
       <van-swipe :autoplay="3000" :show-indicators="false">
         <van-swipe-item v-for="(item,index) in HomeTablist.banners" :key="index">
-          <a :href="item.href">
+          <router-link :to="item.href">
             <img :src="item.imgurl" class="bannersimg" />
-          </a>
+          </router-link>
         </van-swipe-item>
       </van-swipe>
     </div>
@@ -43,7 +43,7 @@ export default {
         for (let i = 0; i < 10; i++) {
           this.HomeTablist.videoList.push({
             id: i,
-            videoHref: "#/video",
+            videoHref: "/video",
             videoImg: require("@/assets/picture/0.jpg"),
             videoTitle: "少卿这么可爱，不如我们……",
             viewNum: "31.3万",

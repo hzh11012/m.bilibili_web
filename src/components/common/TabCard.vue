@@ -55,10 +55,10 @@
         </div>
       </div>
       <div v-if="value == 1" class="videoList">
-        <a :href="item.videoHref" class="videoItem" v-for="item in videoList" :key="item.id">
+        <router-link :to="item.videoHref" class="videoItem" v-for="item in videoList" :key="item.id">
           <div class="videoCover">
             <img class="videoImg" :src="item.videoImg" />
-            <span class="durationTime">{{item.durationTime}}</span>
+            <span class="durationTime">{{item.durationTime | setTime}}</span>
           </div>
           <div class="videoInfo">
             <h3 class="title van-multi-ellipsis--l2">{{item.videoTitle}}</h3>
@@ -73,11 +73,11 @@
               </span>
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
       <div v-if="value == 2" class="albumList">
-        <a
-          :href="item.albumHref"
+        <router-link
+          :to="item.albumHref"
           target="_blank"
           class="albumItem"
           v-for="item in albumList"
@@ -100,7 +100,7 @@
               </span>
             </div>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -134,6 +134,21 @@ export default {
     //点击评论
     clickComment() {
       this.$emit("clickComment");
+    }
+  },
+  filters: {
+    setTime: function(val) {
+      if (!val) return "00:00";
+      let min = parseInt(val / 60);
+      if (min < 10) {
+        min = "0" + min;
+      }
+      let sec = parseInt(val % 60);
+      if (sec < 10) {
+        sec = "0" + sec;
+      }
+      val = `${min}:${sec}`;
+      return val;
     }
   }
 };

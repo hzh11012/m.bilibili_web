@@ -18,7 +18,7 @@
               </div>
               <div class="detail">
                 <div class="user">
-                  <a :href='item.userHref'>{{item.userName}}</a>
+                  <router-link :to='item.userHref'>{{item.userName}}</router-link>
                   <span class="time">{{item.time}}</span>
                 </div>
                 <p class="content">{{item.content}}</p>
@@ -49,6 +49,7 @@ export default {
           this.VideoComments.comment.push({
             userImg: require("@/assets/picture/2.jpg"),
             userName: "永远的MG",
+            userHref:'/userinfo',
             content:
               "川建国暴露的时候，没有一个B站用户是无辜的[doge][doge][doge]",
             time: "5-28"

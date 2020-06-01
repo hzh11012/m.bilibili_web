@@ -1,5 +1,5 @@
 <template>
-  <a :href="video.videoHref" @click="click(video)">
+  <router-link :to="video.videoHref" @click="click(video)">
     <div class="card">
       <img :src="video.videoImg" />
       <div class="count">
@@ -14,7 +14,7 @@
       </div>
     </div>
     <p class="title van-multi-ellipsis--l2">{{video.videoTitle}}</p>
-  </a>
+  </router-link>
 </template>
 
 <script>

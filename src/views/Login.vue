@@ -4,8 +4,7 @@
       middleTop="登录bilibili"
       :rightTop="isShow ? '短信登录' : '密码登录'"
       @changeLogin="isShow = !isShow"
-    >
-    </login-top>
+    ></login-top>
     <div v-if="isShow">
       <login-text
         class="user"
@@ -23,7 +22,7 @@
         @inputChange="contnet => model.password = contnet"
       ></login-text>
       <div class="losePwd">
-        <a href>忘记密码</a>
+        <router-link to="/register">忘记密码</router-link>
       </div>
       <div class="btn-box">
         <div class="box1">
@@ -138,7 +137,7 @@ export default {
     toRegister() {
       this.$router.push("/register");
     },
-    async login1() {
+    login1() {
       let rulg = /^.{6,16}$/;
       let rulg1 = /^.{1,16}$/;
       if (this.model.username == "") {
@@ -146,10 +145,19 @@ export default {
       } else if (this.model.password == "") {
         return this.$toast("密码为空");
       } else {
-        const { data: res } = await this.$http.post("/login", this.model);
-        console.log(res);
-        return this.$toast(res.msg);
-      } 
+        if (
+          this.model.username == "123456" &&
+          this.model.password == "123456"
+        ) {
+          let that =this;
+          setTimeout(function() {
+            that.$router.push("/home/home");
+          }, 2500);
+          return this.$toast("登录成功");
+        } else {
+          return this.$toast("账号或密码错误");
+        }
+      }
     },
     login2() {
       //TODO 获取api返回的code进行校验

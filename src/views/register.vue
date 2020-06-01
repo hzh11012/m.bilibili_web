@@ -114,7 +114,7 @@ export default {
     };
   },
   methods: {
-    async register() {
+    register() {
       let rulg = /^.{6,16}$/;
       let rulg1 = /^.{1,16}$/;
       if (
@@ -122,8 +122,7 @@ export default {
         rulg.test(this.model.username) &&
         rulg.test(this.model.password)
       ) {
-        const { data: res } = await this.$http.post("/register", this.model);
-        return this.$toast(res.msg);
+        return this.$toast("注册成功-账号123456-密码123456");
       } else {
         return this.$toast("格式不正确");
       }
@@ -150,8 +149,8 @@ export default {
         console.log("获取验证码");
       }
     },
-    toLogin(){
-      this.$router.push('/login');
+    toLogin() {
+      this.$router.push("/login");
     }
   }
 };

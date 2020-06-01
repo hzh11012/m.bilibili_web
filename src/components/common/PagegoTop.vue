@@ -32,7 +32,7 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop;
       that.scrollTop = scrollTop;
-      if (that.scrollTop > 800) {
+      if (that.scrollTop > 750) {
         that.goTopShow = true;
       } else {
         that.goTopShow = false;

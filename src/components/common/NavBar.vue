@@ -1,16 +1,16 @@
 <template>
   <div class="nav-bar">
-    <a :href="leftHref">
+    <router-link :to="leftHref">
       <i class="vanfont vanfont-logo">&#xE725;</i>
-    </a>
+    </router-link>
     <div class="right">
-      <a :href="middleHref" class="search">
+      <router-link :to="middleHref" class="search">
         <i class="vanfont">&#xE62f;</i>
         <span class="hot-word van-ellipsis">{{hotSearch}}</span>
-      </a>
-      <a :href="rightHref">
+      </router-link>
+      <router-link :to="rightHref">
         <van-image round width="6.397vw" height="6.397vw" :src="avatarImg" />
-      </a>
+      </router-link>
       <button @click="onClick">{{btnTitle}}</button>
     </div>
   </div>
@@ -18,7 +18,14 @@
 
 <script>
 export default {
-  props: ["hotSearch", "avatarImg", "btnTitle","leftHref","middleHref","rightHref"],
+  props: [
+    "hotSearch",
+    "avatarImg",
+    "btnTitle",
+    "leftHref",
+    "middleHref",
+    "rightHref"
+  ],
   methods: {
     onClick() {
       this.$emit("onClick");

@@ -4,9 +4,9 @@
       hotSearch="api获取热搜关键词"
       :avatarImg="userInfo.avatarImg"
       btnTitle="下载 App"
-      leftHref="/"
-      middleHref
-      rightHref="#/userinfo"
+      leftHref="/home"
+      middleHref="/home"
+      rightHref="/userinfo"
       @onClick="downloadApp"
     ></nav-bar>
     <userinfo-header :userInfo="userInfo">
@@ -24,6 +24,7 @@
     <van-popup :overlay="false" class="pop" v-model="showPop" position="right">
       <user-space @logOut="logout" @isShow="isShowPop" :userDetail="userDetail"></user-space>
     </van-popup>
+    <pagego-top></pagego-top>
   </div>
 </template>
 
@@ -33,6 +34,7 @@ import UserinfoHeader from "@/components/common/UserinfoHeader.vue";
 import TabCard from "@/components/common/TabCard.vue";
 import MFooter from "@/components/common/MFooter.vue";
 import UserSpace from "@/components/common/UserSpace.vue";
+import PagegoTop from "@/components/common/PagegoTop.vue";
 export default {
   data() {
     return {
@@ -55,14 +57,50 @@ export default {
           userExtra: "02-23",
           isSupport: true,
           TextorNum: "2"
+        },
+        {
+          id: 2,
+          userImg: require("@/assets/picture/m.jpg"),
+          userBadge: 1,
+          userName: "Ice空帆船",
+          userExtra: "02-23",
+          isSupport: true,
+          TextorNum: "2"
+        },
+        {
+          id: 3,
+          userImg: require("@/assets/picture/m.jpg"),
+          userBadge: 1,
+          userName: "Ice空帆船",
+          userExtra: "02-23",
+          isSupport: true,
+          TextorNum: "2"
+        },
+        {
+          id: 4,
+          userImg: require("@/assets/picture/m.jpg"),
+          userBadge: 1,
+          userName: "Ice空帆船",
+          userExtra: "02-23",
+          isSupport: true,
+          TextorNum: "2"
+        },
+        {
+          id: 5,
+          userImg: require("@/assets/picture/m.jpg"),
+          userBadge: 1,
+          userName: "Ice空帆船",
+          userExtra: "02-23",
+          isSupport: true,
+          TextorNum: "2"
         }
       ],
       videoList: [
         {
           id: 0,
-          videoHref: "#/userinfo",
+          videoHref: "/video",
           videoImg: require("@/assets/picture/4.jpg"),
-          durationTime: "03:50",
+          durationTime: 164,
           videoTitle:
             "维护甲方萨科香港警察：你们吃面包，我去吃海底捞！结果他们真去了……",
           viewNum: "1007.3万",
@@ -70,9 +108,9 @@ export default {
         },
         {
           id: 1,
-          videoHref: "#/userinfo",
+          videoHref: "/video",
           videoImg: require("@/assets/picture/6.jpg"),
-          durationTime: "00:25",
+          durationTime: 352,
           videoTitle: "趴着别动",
           viewNum: "44",
           danmuNum: "0"
@@ -81,7 +119,7 @@ export default {
       albumList: [
         {
           id: 0,
-          albumHref: "#/userinfo",
+          albumHref: "/home",
           albumImg: require("@/assets/picture/2.jpg"),
           durationPages: "3P",
           albumTitle:
@@ -91,7 +129,7 @@ export default {
         },
         {
           id: 1,
-          albumHref: "#/userinfo",
+          albumHref: "/home",
           albumImg: require("@/assets/picture/5.jpg"),
           durationPages: "5P",
           albumTitle: "词系列_知识增加][热词系列_问号]@观察者网",
@@ -141,7 +179,8 @@ export default {
     UserinfoHeader,
     TabCard,
     MFooter,
-    UserSpace
+    UserSpace,
+    PagegoTop
   },
   methods: {
     downloadApp() {
@@ -162,6 +201,6 @@ export default {
   background: #f4f4f4;
   height: 100%;
   width: 100%;
-  top: 100vw;
+  margin-top: 11.5vw;
 }
 </style>

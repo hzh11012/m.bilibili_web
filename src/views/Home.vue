@@ -6,9 +6,9 @@
           hotSearch="api获取热搜关键词"
           :avatarImg="userImg"
           btnTitle="下载 App"
-          leftHref="/"
-          middleHref
-          rightHref="#/userinfo"
+          leftHref="/home"
+          middleHref="/home"
+          rightHref="/userinfo"
           @onClick="downloadApp"
         ></nav-bar>
         <div>
@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       tabList: [
-        { id: 0, title: "首页", to: "#/home" },
+        { id: 0, title: "首页", to: "#/home/home" },
         { id: 1, title: "动画", to: "#/home/chanel" },
         { id: 2, title: "番剧", to: "#/home/chanel" },
         { id: 3, title: "国创", to: "#/home/chanel" },
@@ -66,7 +66,7 @@ export default {
           video: [
             {
               id: 0,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/1.jpg"),
               videoTitle: "娶妻若如此，枸杞也难医",
               viewNum: "180.6万",
@@ -74,7 +74,7 @@ export default {
             },
             {
               id: 1,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/2.jpg"),
               videoTitle: "重新认识下！我们叫肤白貌美！风情万种！一眼误终生！",
               viewNum: "300.7万",
@@ -82,7 +82,7 @@ export default {
             },
             {
               id: 2,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/3.jpg"),
               videoTitle: "这大概就是东方之美了",
               viewNum: "157.2万",
@@ -90,7 +90,7 @@ export default {
             },
             {
               id: 3,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/4.jpg"),
               videoTitle:
                 "这首《Monsters》，如今治愈了多少人！！！ 怪       物 ℳ₯㎕_Monsters",
@@ -105,7 +105,7 @@ export default {
           video: [
             {
               id: 0,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/4.jpg"),
               videoTitle: "佟大掌柜想要我搞对象？？？",
               viewNum: "180.6万",
@@ -113,7 +113,7 @@ export default {
             },
             {
               id: 1,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/3.jpg"),
               videoTitle: "警察：这就是你推理出来的犯人？？？",
               viewNum: "300.7万",
@@ -121,7 +121,7 @@ export default {
             },
             {
               id: 2,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/2.jpg"),
               videoTitle: "大 学 返 校 现 状",
               viewNum: "157.2万",
@@ -129,7 +129,7 @@ export default {
             },
             {
               id: 3,
-              videoHref: "#/video",
+              videoHref: "/video",
               videoImg: require("@/assets/picture/1.jpg"),
               videoTitle: "【杂乱无章】谈恋爱之后，你会失去很多朋友。",
               viewNum: "85.9万",
@@ -141,11 +141,11 @@ export default {
       HomeTablist: {
         banners: [
           {
-            href: "",
+            href: "/home",
             imgurl: require("@/assets/picture/h1.jpg")
           },
           {
-            href: "",
+            href: "/home",
             imgurl: require("@/assets/picture/h2.jpg")
           }
         ],
