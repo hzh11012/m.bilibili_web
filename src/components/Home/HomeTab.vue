@@ -12,7 +12,7 @@
     <van-list v-model="loading" :finished="finished" @load="onLoad">
       <div class="video-list-box">
         <div class="video-list">
-          <video-card v-for="(item,index) in HomeTablist.videoList" :video="item" :key="index"></video-card>
+          <video-card v-for="item in HomeTablist.videoList" :video="item" :key="item.id"></video-card>
         </div>
       </div>
     </van-list>
@@ -32,7 +32,8 @@ export default {
   data() {
     return {
       loading: false,
-      finished: false
+      finished: false,
+      id: 0
     };
   },
   methods: {
@@ -42,13 +43,14 @@ export default {
       setTimeout(() => {
         for (let i = 0; i < 10; i++) {
           this.HomeTablist.videoList.push({
-            id: i,
+            id: this.id,
             videoHref: "/video",
             videoImg: require("@/assets/picture/0.jpg"),
             videoTitle: "少卿这么可爱，不如我们……",
-            viewNum: "31.3万",
-            danmuNum: "435"
+            viewNum: 423324,
+            danmuNum: 353
           });
+          this.id++;
         } // 加载状态结束
         this.loading = false;
 

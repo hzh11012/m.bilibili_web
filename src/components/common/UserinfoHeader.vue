@@ -10,21 +10,21 @@
       <div class="relation">
         <div class="count">
           <div class="fans">
-            <span class="num">{{userInfo.fansNum}}</span>
+            <span class="num">{{userInfo.fansNum | setNum}}</span>
             <span class="type">粉丝</span>
           </div>
           <div class="split">
             <span></span>
           </div>
           <div class="follow">
-            <span class="num">{{userInfo.followNum}}</span>
+            <span class="num">{{userInfo.followNum | setNum}}</span>
             <span class="type">关注</span>
           </div>
           <div class="split">
             <span></span>
           </div>
           <div class="likes">
-            <span class="num">{{userInfo.likesNum}}</span>
+            <span class="num">{{userInfo.likesNum | setNum}}</span>
             <span class="type">获赞</span>
           </div>
         </div>

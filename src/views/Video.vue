@@ -58,8 +58,8 @@ export default {
           isAllow: true, //是否允许转载
           title: "穿什么高跟鞋呀，光脚攻击翻倍哦！",
           upName: "Ice空帆船",
-          viewNum: "298.3万次观看",
-          danmuNum: "2.7万弹幕",
+          viewNum: 2923222,
+          danmuNum: 27893,
           time: "05-29",
           desc:
             "一首老歌，听过的人可能已不再年轻，但是希望我们的心能永葆青春！",
@@ -70,7 +70,7 @@ export default {
             { id: 3, tagName: "上勾拳", href: "/tag" },
             { id: 4, tagName: "铁拳", href: "/tag" }
           ],
-          pinglun: "1162评论",
+          pinglun: 12312,
           channelPage: {
             second: "生活",
             third: "国产原创相关"
@@ -82,80 +82,80 @@ export default {
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 123897,
+            danmuNum: 32432
           },
           {
             id: 1,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 43543,
+            danmuNum: 564
           },
           {
             id: 2,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 76768,
+            danmuNum: 12321
           },
           {
             id: 3,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 345434,
+            danmuNum: 4565
           },
           {
             id: 4,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 56756,
+            danmuNum: 768
           },
           {
             id: 5,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 67867,
+            danmuNum: 8973
           },
           {
             id: 6,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 13253,
+            danmuNum: 4366
           },
           {
             id: 7,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 3466,
+            danmuNum: 345
           },
           {
             id: 9,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 14534,
+            danmuNum: 3453
           },
           {
             id: 8,
             videoHref: "/video",
             videoImg: require("@/assets/picture/1.jpg"),
             videoTitle: "娶妻若如此，枸杞也难医",
-            viewNum: "180.6万",
-            danmuNum: "3587"
+            viewNum: 15677,
+            danmuNum: 5444
           }
         ],
         VideoComments: {

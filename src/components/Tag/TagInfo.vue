@@ -3,8 +3,8 @@
     <div class="pic" :style="'background-image: url('+tagInfo.tagImg+')'"></div>
     <div class="text">
       <p>{{tagInfo.tagName}}</p>
-      <p>{{tagInfo.followNum}}人关注</p>
-      <p>{{tagInfo.relatedNum}}个相关视频</p>
+      <p>{{tagInfo.followNum | setNum}}人关注</p>
+      <p>{{tagInfo.relatedNum | setNum}}个相关视频</p>
     </div>
     <div class="follow" @click="follow">关注</div>
   </div>

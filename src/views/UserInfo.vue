@@ -103,8 +103,8 @@ export default {
           durationTime: 164,
           videoTitle:
             "维护甲方萨科香港警察：你们吃面包，我去吃海底捞！结果他们真去了……",
-          viewNum: "1007.3万",
-          danmuNum: "27.3万"
+          viewNum: 1000724,
+          danmuNum: 213124
         },
         {
           id: 1,
@@ -112,8 +112,8 @@ export default {
           videoImg: require("@/assets/picture/6.jpg"),
           durationTime: 352,
           videoTitle: "趴着别动",
-          viewNum: "44",
-          danmuNum: "0"
+          viewNum: 54573,
+          danmuNum: 2134
         }
       ],
       albumList: [
@@ -139,9 +139,9 @@ export default {
       ],
       userInfo: {
         avatarImg: require("@/assets/picture/m.jpg"),
-        fansNum: "8.2万",
-        followNum: "75",
-        likesNum: "48.2万",
+        fansNum: 46512,
+        followNum: 213,
+        likesNum: 483634,
         btnType: false,
         name: "Ice空帆船",
         gender: 1,

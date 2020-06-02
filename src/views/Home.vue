@@ -69,24 +69,24 @@ export default {
               videoHref: "/video",
               videoImg: require("@/assets/picture/1.jpg"),
               videoTitle: "娶妻若如此，枸杞也难医",
-              viewNum: "180.6万",
-              danmuNum: "3587"
+              viewNum: 325325,
+              danmuNum: 3587
             },
             {
               id: 1,
               videoHref: "/video",
               videoImg: require("@/assets/picture/2.jpg"),
               videoTitle: "重新认识下！我们叫肤白貌美！风情万种！一眼误终生！",
-              viewNum: "300.7万",
-              danmuNum: "5918"
+              viewNum: 35345,
+              danmuNum: 1242
             },
             {
               id: 2,
               videoHref: "/video",
               videoImg: require("@/assets/picture/3.jpg"),
               videoTitle: "这大概就是东方之美了",
-              viewNum: "157.2万",
-              danmuNum: "5159"
+              viewNum: 78978,
+              danmuNum: 45645
             },
             {
               id: 3,
@@ -94,8 +94,8 @@ export default {
               videoImg: require("@/assets/picture/4.jpg"),
               videoTitle:
                 "这首《Monsters》，如今治愈了多少人！！！ 怪       物 ℳ₯㎕_Monsters",
-              viewNum: "85.9万",
-              danmuNum: "7781"
+              viewNum: 768546,
+              danmuNum: 3254
             }
           ]
         },
@@ -108,32 +108,32 @@ export default {
               videoHref: "/video",
               videoImg: require("@/assets/picture/4.jpg"),
               videoTitle: "佟大掌柜想要我搞对象？？？",
-              viewNum: "180.6万",
-              danmuNum: "3587"
+              viewNum: 213124,
+              danmuNum: 34543
             },
             {
               id: 1,
               videoHref: "/video",
               videoImg: require("@/assets/picture/3.jpg"),
               videoTitle: "警察：这就是你推理出来的犯人？？？",
-              viewNum: "300.7万",
-              danmuNum: "5918"
+              viewNum: 33333,
+              danmuNum: 4534
             },
             {
               id: 2,
               videoHref: "/video",
               videoImg: require("@/assets/picture/2.jpg"),
               videoTitle: "大 学 返 校 现 状",
-              viewNum: "157.2万",
-              danmuNum: "5159"
+              viewNum: 157078,
+              danmuNum: 5476
             },
             {
               id: 3,
               videoHref: "/video",
               videoImg: require("@/assets/picture/1.jpg"),
               videoTitle: "【杂乱无章】谈恋爱之后，你会失去很多朋友。",
-              viewNum: "85.9万",
-              danmuNum: "7781"
+              viewNum: 21431,
+              danmuNum: 7786
             }
           ]
         }

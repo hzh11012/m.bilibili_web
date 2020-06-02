@@ -6,6 +6,12 @@ import store from './store'
 import './assets/css/global.css'
 import './assets/bilibili-icon/vanfont.css'
 import './assets/iconfont/iconfont.css'
+//导入全局过滤器
+import * as filters from './assets/js/filters.js'
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key]);
+})
+
 Vue.config.productionTip = false
 
 import {

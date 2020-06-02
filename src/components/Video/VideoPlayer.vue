@@ -143,21 +143,6 @@ export default {
         this.playVideo();
       }, 0);
     }
-  },
-  filters: {
-    setTime: function(val) {
-      if (!val) return "00:00";
-      let min = parseInt(val / 60);
-      if (min < 10) {
-        min = "0" + min;
-      }
-      let sec = parseInt(val % 60);
-      if (sec < 10) {
-        sec = "0" + sec;
-      }
-      val = `${min}:${sec}`;
-      return val;
-    }
   }
 };
 </script>

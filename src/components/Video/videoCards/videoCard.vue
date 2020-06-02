@@ -5,11 +5,11 @@
       <div class="count">
         <span>
           <i class="vanfont">&#xE6E6;</i>
-          {{video.viewNum}}
+          {{video.viewNum | setNum}}
         </span>
         <span>
           <i class="vanfont">&#xE6E7;</i>
-          {{video.danmuNum}}
+          {{video.danmuNum | setNum}}
         </span>
       </div>
     </div>
@@ -19,14 +19,9 @@
 
 <script>
 export default {
-  props:['video'],
-  data() {
-    return {
-      
-    };
-  },
-  methods:{
-    click(item){
+  props: ["video"],
+  methods: {
+    click(item) {
       this.$store.commit("activeVideoId", item.id);
     }
   }

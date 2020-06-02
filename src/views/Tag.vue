@@ -11,7 +11,7 @@
     ></nav-bar>
     <tag-info :tagInfo="tagInfo" @follow="follow"></tag-info>
     <tag-list :tagList="tagInfo.tagList"></tag-list>
-    <tag-relatedvideo :relatedList="tagInfo.relatedList"></tag-relatedvideo>
+    <tag-relatedvideo :video="tagInfo.relatedList"></tag-relatedvideo>
   </div>
 </template>
 
@@ -28,8 +28,8 @@ export default {
       tagInfo: {
         tagImg: require("@/assets/picture/2.jpg"),
         tagName: "押韵狂魔",
-        followNum: 420,
-        relatedNum: 73,
+        followNum: 42022,
+        relatedNum: 7322,
         tagList: [
           { id: 0, tagName: "守望先锋", tagHref: "/tag" },
           { id: 1, tagName: "铁拳", tagHref: "/tag" },
@@ -48,8 +48,8 @@ export default {
             duration: 150,
             title: "【惩戒瑶】这种人应该挺孤单的！",
             authorName: "玩亦杰的曜桑",
-            viewNum: "30.8万",
-            danmuNum: "760",
+            viewNum: 214324,
+            danmuNum: 760,
             videohref: "/video"
           },
           {
@@ -58,8 +58,8 @@ export default {
             duration: 238,
             title: "老是先原地眩晕再跳大？那就让他们融为一体！",
             authorName: "骚铭",
-            viewNum: "12.3万",
-            danmuNum: "1159",
+            viewNum: 123124,
+            danmuNum: 1159,
             videohref: "/video"
           },
           {
@@ -78,8 +78,8 @@ export default {
             duration: 287,
             title: "只有我们国漫，才能剪出古风的感觉！",
             authorName: "Adou阿豆",
-            viewNum: "4.8万",
-            danmuNum: "153",
+            viewNum: 48565,
+            danmuNum: 154,
             videohref: "/video"
           },
           {
@@ -88,8 +88,8 @@ export default {
             duration: 452,
             title: "4K超清【IU】 “Blueming”",
             authorName: "月光下弹月光",
-            viewNum: "117.9万",
-            danmuNum: "3970",
+            viewNum: 1179232,
+            danmuNum: 5879,
             videohref: "/video"
           },
           {
@@ -98,8 +98,8 @@ export default {
             duration: 122,
             title: "“我一路向北，离开有你的季节”",
             authorName: "囧墙先生",
-            viewNum: "286.9万",
-            danmuNum: "1.6万",
+            viewNum: 2865275,
+            danmuNum: 16454,
             videohref: "/video"
           }
         ]

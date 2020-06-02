@@ -1,12 +1,14 @@
 <template>
   <div class="main">
     <search-head
+      :isShowGuanbi="this.inputValue"
+      @guanbi="guanbi"
       @search="search"
+      v-model="inputValue"
       :placeholder="hotSearch"
-      @inputChange="content => this.inputValue = content"
     ></search-head>
     <search-hot :hotWord="hotWord" @onClick="onClick"></search-hot>
-    <search-history :historyList="historyWord" @clearHistory="clearHistory" @onClick='onClick'></search-history>
+    <search-history :historyList="historyWord" @clearHistory="clearHistory" @onClick="onClick"></search-history>
   </div>
 </template>
 
@@ -53,7 +55,6 @@ export default {
     clearHistory() {
       this.historyWord = [];
       localStorage.removeItem("searchWord");
-      console.log("清除历史记录");
     },
     search() {
       if (this.inputValue == "") {
@@ -78,11 +79,19 @@ export default {
 
       //axios获取搜索结果数据
       //TODO
-      this.$router.push("/searchresult");
+      this.$router
+        .push({
+          path: "/searchresult",
+          query: { keyword: this.inputValue }
+        })
+        .catch(data => {});
     },
     onClick(value) {
       this.inputValue = value;
       this.search();
+    },
+    guanbi() {
+      this.inputValue = "";
     }
   },
   created() {

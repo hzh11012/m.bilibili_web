@@ -3,7 +3,7 @@
     <div class="video-comments">
       <div class="title">
         评论
-        <span class="count">（{{VideoComments.nums}}）</span>
+        <span class="count">（{{VideoComments.nums | setNum}}）</span>
       </div>
       <div class="send">
         <img class="bfs-img" :src="VideoComments.avatarImg" />

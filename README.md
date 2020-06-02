@@ -18,6 +18,12 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+## 项目说明
+ bilibili 移动web端
+
+ 由于找不到合适的接口，故该项目没有使用接口
+
+ 
 ### 组件属性介绍
 
  LoginBtn  | 注释  | 类型
@@ -60,9 +66,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  userInfo  | 用户数据 | 对象 
  --  | userInfo注释 | --
  avatarImg  | 用户头像 | url 
- fansNum  | 粉丝数 | string 
- followNum  | 关注数 | string 
- likesNum  | 获赞数 | string 
+ fansNum  | 粉丝数 | number 
+ followNum  | 关注数 | number 
+ likesNum  | 获赞数 | number 
  btnType  | 按钮类型 true为实心按钮 false为朴素按钮 | boolean 
  name  | 用户昵称 | string 
  gender  | 性别icon 可选 0男 1女 其他为保密 | number 
@@ -126,7 +132,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  ---- | ----- | ------  
  tabList  | 选项卡内容 | 对象
  --  | tabList注释 | --
- id  | id | num
+ id  | id | number
  title  | 选项卡标题 | string
  to  | 选项卡href | url
 
@@ -134,7 +140,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  ---- | ----- | ------  
  videoList  | 选项卡选中后展示的组件内容 | 数组对象
  --  | videoList注释 | --
- id  | id | num
+ id  | id | number
  title  | 组件内分类的标题 | string
  video  | 该分类内的数据 | 数组对象
  ---  | video注释 | ---
@@ -146,7 +152,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  viewNum  | 播放量 | number 
  danmuNum  | 弹幕数 | number 
 
-  HomeTablist  | 注释  | 类型
+  HomeTab  | 注释  | 类型
  ---- | ----- | ------  
  banners  | 首页轮播图 | 数组对象
   --  | banners注释 | --
@@ -155,7 +161,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   --  | -- | --
  videoList  | 视频数据 | 数组对象
   --  | videoList注释 | --
- id  | id | num
+ id  | id | number
  videoHref  | 视频href | url 
  videoImg  | 视频封面 | url 
  videoTitle  | 视频标题 | string 
@@ -171,7 +177,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  tuijian  | 推荐视频 | 对象
   ---  | tuijian注释 | ---
   ---  | tuijian注释 | ---
- id  | id | num
+ id  | id | number
  imgUrl  | 封面图片链接 | url
  title  | 标题 | string
   --  | -- | --
@@ -185,11 +191,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  isActivity  | 是否活动 | boolean
  isAllow  | 是否允许转载 | boolean
  upName  | up名字 | string
- viewNum  | 播放量 | string
- danmuNum  | 弹幕数 | string
+ viewNum  | 播放量 | number
+ danmuNum  | 弹幕数 | number
  time  | 发布时间 | string
  desc  | 视频描述 | string
- pinglun  | 视频评论数 | string
+ pinglun  | 视频评论数 | number
  channelPage  | 视频所属的类型 | 数组对象
   ---  | channelPage注释 | ---
   ---  | channelPage注释 | ---
@@ -201,7 +207,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   ---  | tags注释 | ---
  id  | id | number
  tagName  | 标签名称 | string
- href  | 标签指向的链接 | href
+ href  | 标签指向的链接 | url
   --  | -- | --
  @shoucang  | 收藏按钮事件 | 事件 
  @huancun  | 缓存按钮事件 | 事件 
@@ -212,19 +218,18 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  ---- | ----- | ------ 
  video  | 视频的详情 | 数组对象
   --  | video注释 | --
- id  | id | num
+ id  | id | number
  videoHref  | 视频href | href 
  videoImg  | 视频封面 | url 
  videoTitle  | 视频标题 | string 
  viewNum  | 播放量 | number 
  danmuNum  | 弹幕数 | number 
 
-
   VideoRelated  | 注释  | 类型
  ---- | ----- | ------ 
  videoRelated  | 视频的详情 | 数组对象
   --  | videoRelated注释 | --
- id  | id | num
+ id  | id | number
  videoHref  | 视频href | href 
  videoImg  | 视频封面 | url 
  videoTitle  | 视频标题 | string 
@@ -235,7 +240,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  ---- | ----- | ------ 
  VideoComments  | 视频评论 | 对象
   --  | VideoComments注释 | --
- nums  | 评论数 | num
+ nums  | 评论数 | number
  avatarImg  | 个人头像链接 | url
  comment  | 评论详情 | 数组对象
   --  | comment注释 | --
@@ -251,28 +256,28 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   --  | tagInfo注释 | --
  tagImg  | 标签图片 | url
  tagName  | 标签名字 | string
- followNum  | 关注数 | num
- relatedNum  | 相关视频数 | num
+ followNum  | 关注数 | number
+ relatedNum  | 相关视频数 | number
 
   TagList  | 注释  | 类型
  ---- | ----- | ------ 
  tagList  | 标签数组 | 数组对象
   --  | tagList注释 | --
- id  | id | num
+ id  | id | number
  tagName  | 标签名字 | string
  tagHref  | 标签链接 | href
 
   TagRelatedvideo  | 注释  | 类型
  ---- | ----- | ------ 
- relatedList  | 标签数组 | 数组对象
-  --  | relatedList注释 | --
- id  | id | num
+ video  | 标签数组 | 数组对象
+  --  | video注释 | --
+ id  | id | number
  videoImg  | 视频poster | url
  duration  | 视频时长 | number
  title  | 视频标题 | string
  authorName  | 作者名称 | string
- viewNum  | 观看数 | string
- danmuNum  | 弹幕数 | string
+ viewNum  | 观看数 | number
+ danmuNum  | 弹幕数 | number
  videohref  | 视频链接 | href
 
   SearchHead  | 注释  | 类型
@@ -297,3 +302,26 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   --  | -- | --
  @clearHistory  | 清空历史记录localStorage | event
  @onClick  | 点击热搜词进行搜索 | event
+
+  MainPanel  | 注释  | 类型
+ ---- | ----- | ------ 
+ searchResult  | 搜索结果的视频列表 | 数组对象
+  --  | searchResult注释 | --
+ id  | id | number
+ videoImg  | 视频poster | url
+ duration  | 视频时长 | number
+ title  | 视频标题 | string
+ authorName  | 作者名称 | string
+ viewNum  | 观看数 | number
+ danmuNum  | 弹幕数 | number
+ videohref  | 视频链接 | href
+
+  Tab  | 注释  | 类型
+ ---- | ----- | ------ 
+ searchResult  | 搜索结果的番剧，up，影视数目 | 数组对象
+  --  | searchResult注释 | --
+ fanjuNum  | 番剧数 | number
+ upNum  | up主数 | number
+ tvNum  | 影视数 | number
+  --  | -- | --
+ @toggleTabs  | 切换tab选项卡事件 | event

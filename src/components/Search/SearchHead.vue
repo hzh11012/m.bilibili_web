@@ -2,8 +2,14 @@
   <div class="search-bar">
     <form action class="input-area">
       <i class="vanfont ic_search">&#xE635;</i>
-      <input type="search" :placeholder="placeholder" v-model="content" @keyup.enter="search" />
-      <i class="vanfont guanbi" @click="guanbi" v-if="content">&#xE63C;</i>
+      <input
+        type="search"
+        :placeholder="placeholder"
+        :value="value"
+        @input="$emit('getInputValue',$event.target.value)"
+        @keyup.enter="search"
+      />
+      <i class="vanfont guanbi" @click="guanbi" v-if="isShowGuanbi">&#xE63C;</i>
     </form>
     <router-link to="/home/home" class="cancel">取消</router-link>
   </div>
@@ -11,26 +17,20 @@
 
 <script>
 export default {
-  props: ["placeholder"],
+  props: ["placeholder", "value","isShowGuanbi"],
+  model: {
+    porp: "value",
+    event: "getInputValue"
+  },
   data() {
-    return {
-      content: ""
-    };
+    return {};
   },
   methods: {
-    handlerule() {
-      this.$emit("inputChange", this.content);
-    },
     guanbi() {
-      this.content = "";
+      this.$emit("guanbi");
     },
     search() {
       this.$emit("search");
-    }
-  },
-  watch: {
-    content() {
-      this.handlerule();
     }
   }
 };

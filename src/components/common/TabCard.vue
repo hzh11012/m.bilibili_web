@@ -65,11 +65,11 @@
             <div class="state">
               <span class="viewNum">
                 <i class="vanfont">&#xE6E6;</i>
-                <span>{{item.viewNum}}</span>
+                <span>{{item.viewNum | setNum}}</span>
               </span>
               <span class="danmuNum">
                 <i class="vanfont">&#xE6E7;</i>
-                <span>{{item.danmuNum}}</span>
+                <span>{{item.danmuNum | setNum}}</span>
               </span>
             </div>
           </div>
@@ -92,11 +92,11 @@
             <div class="state">
               <span class="viewNum">
                 <van-icon name="eye-o" />
-                <span>{{item.viewNum}}</span>
+                <span>{{item.viewNum | setNum}}</span>
               </span>
               <span class="liuyanNum">
                 <i class="vanfont">&#xE639;</i>
-                <span>{{item.liuyanNum}}</span>
+                <span>{{item.liuyanNum | setNum}}</span>
               </span>
             </div>
           </div>
@@ -134,21 +134,6 @@ export default {
     //点击评论
     clickComment() {
       this.$emit("clickComment");
-    }
-  },
-  filters: {
-    setTime: function(val) {
-      if (!val) return "00:00";
-      let min = parseInt(val / 60);
-      if (min < 10) {
-        min = "0" + min;
-      }
-      let sec = parseInt(val % 60);
-      if (sec < 10) {
-        sec = "0" + sec;
-      }
-      val = `${min}:${sec}`;
-      return val;
     }
   }
 };

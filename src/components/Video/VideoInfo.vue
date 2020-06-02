@@ -23,8 +23,8 @@
       </div>
       <div class="data">
         <router-link to="videoInfo.to" class="up">{{videoInfo.upName}}</router-link>
-        <span class="viewNum">{{videoInfo.viewNum}}</span>
-        <span class="danmuNum">{{videoInfo.danmuNum}}</span>
+        <span class="viewNum">{{videoInfo.viewNum | setNum}}次观看</span>
+        <span class="danmuNum">{{videoInfo.danmuNum | setNum}}弹幕</span>
         <span class="time">{{videoInfo.time}}</span>
       </div>
       <div ref="fold" class="fold-container">
@@ -63,7 +63,7 @@
       <div class="right">
         <span class="toolbar-item" @click="pinglun">
           <i class="vanfont">&#xEEE4;</i>
-          <span>{{videoInfo.pinglun}}</span>
+          <span>{{videoInfo.pinglun | setNum}}评论</span>
         </span>
       </div>
       <div class="clear"></div>
