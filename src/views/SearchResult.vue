@@ -8,7 +8,7 @@
       :placeholder="hotSearch"
     ></search-head>
     <tab @toggleTabs="toggleTabs" :searchResult="searchResult"></tab>
-    <main-panel :is="active" :searchResult="searchResult.videoList"></main-panel>
+    <main-panel :is="active" :searchResult="searchResult"></main-panel>
     <pagego-top></pagego-top>
   </div>
 </template>
@@ -18,6 +18,8 @@ import SearchHead from "@/components/Search/SearchHead.vue";
 import Tab from "@/components/SearchResult/Tab.vue";
 import MainPanel from "@/components/SearchResult/MainPanel.vue";
 import FanjuPanel from "@/components/SearchResult/FanjuPanel.vue";
+import UpPanel from "@/components/SearchResult/UpPanel.vue";
+import TvPanel from "@/components/SearchResult/TvPanel.vue";
 import PagegoTop from "@/components/common/PagegoTop.vue";
 export default {
   data() {
@@ -51,6 +53,37 @@ export default {
             danmuNum: 45645,
             videohref: "/video"
           }
+        ],
+        fanjuList: [
+          {
+            id: 0,
+            fanjuImg: require("@/assets/picture/fanju0.png"),
+            title: "公主连结Re:Dive",
+            fanjuHref: "/video"
+          }
+        ],
+        upList: [
+          {
+            uid: 1232682,
+            upImg: require("@/assets/picture/up.jpg"),
+            name: "公主连结ReDive",
+            fansNum: 2451287,
+            videoNum: 64,
+            sign: "与你再次连结的物语",
+            upHref: "/userinfo"
+          }
+        ],
+        tvList: [
+          // {
+          //   id: 0,
+          //   tvImg: require("@/assets/picture/tv0.jpg"),
+          //   title: "名侦探柯南：绀青之拳",
+          //   area: "地区：日本",
+          //   cv:
+          //     "演员：高山南 山口胜平 山崎和佳奈 小山力也 绪方贤一 岩居由希子 高木涉 大谷育江 林原惠美 松井菜樱子 桧山修之 石井康嗣 浅川悠 高桥广树 梶裕贵 间宫康弘 林修 河北麻由子 山崎育三郎",
+          //   staff: "导演：永冈智佳",
+          //   tvHref: "/video"
+          // }
         ]
       }
     };
@@ -89,11 +122,14 @@ export default {
       this.$router.push("/search");
     },
     toggleTabs(index) {
-      console.log(index);
       if (index == 0) {
         this.active = "MainPanel";
-      } else {
+      } else if (index == 1) {
         this.active = "FanjuPanel";
+      } else if (index == 2) {
+        this.active = "UpPanel";
+      } else {
+        this.active = "TvPanel";
       }
     }
   },
@@ -102,6 +138,8 @@ export default {
     Tab,
     MainPanel,
     FanjuPanel,
+    UpPanel,
+    TvPanel,
     PagegoTop
   },
   created() {

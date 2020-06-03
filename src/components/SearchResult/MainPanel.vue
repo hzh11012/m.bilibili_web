@@ -8,16 +8,15 @@
         <a class="order-tab-item" :class="activeIndex==3?'on':''" @click="toggleTabs(3)">弹幕多</a>
       </div>
       <div class="list">
-        <!-- <div></div>功能暂时不做
-        <div></div>-->
         <div class="flow-loader">
           <van-list v-model="loading" :finished="finished" @load="onLoad">
             <div class="video-list-box">
               <div class="video-list">
-                <video-carddetail v-for="item in range" :video="item" :key="item.id"></video-carddetail>
+                <video-carddetail v-for="(item,index) in range" :video="item" :key="index"></video-carddetail>
               </div>
             </div>
           </van-list>
+          <not-found v-if="range == ''"></not-found>
           <flow-loader :finished="finished"></flow-loader>
         </div>
       </div>
@@ -27,6 +26,7 @@
 
 <script>
 import videoCarddetail from "../Video/videoCards/videoCarddetail.vue";
+import NotFound from "@/components/common/NotFound.vue";
 import FlowLoader from "../common/FlowLoaderNo.vue";
 export default {
   props: ["searchResult"],
@@ -47,7 +47,7 @@ export default {
       // setTimeout 仅做示例，真实场景中一般为 ajax 请求
       setTimeout(() => {
         for (let i = 0; i < 10; i++) {
-          this.searchResult.push({
+          this.searchResult.videoList.push({
             id: this.id,
             videoImg: require("@/assets/picture/3.jpg"),
             duration: 206,
@@ -63,7 +63,7 @@ export default {
         this.loading = false;
 
         // 数据全部加载完成
-        if (this.searchResult.length >= 50) {
+        if (this.searchResult.videoList.length >= 50) {
           this.finished = true;
         }
       }, 500);
@@ -73,7 +73,7 @@ export default {
   //正常条件下应该是请求axios 返回排序后的数组
   computed: {
     range: function() {
-      let arr = this.searchResult;
+      let arr = this.searchResult.videoList;
       if (this.activeIndex == 3) {
         arr.sort(function(a, b) {
           return b.danmuNum - a.danmuNum;
@@ -92,6 +92,7 @@ export default {
   },
   components: {
     FlowLoader,
+    NotFound,
     videoCarddetail
   }
 };

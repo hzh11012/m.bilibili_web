@@ -305,8 +305,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
   MainPanel  | 注释  | 类型
  ---- | ----- | ------ 
- searchResult  | 搜索结果的视频列表 | 数组对象
+ searchResult  | 搜索结果的综合列表 | 数组对象
   --  | searchResult注释 | --
+  --  | 该数据是传到MainPanel组件中的videoCardDetail子组件中 | --
+  --  | 所以在此省略videoCardDetail组件的注释 | --
  id  | id | number
  videoImg  | 视频poster | url
  duration  | 视频时长 | number
@@ -325,3 +327,42 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
  tvNum  | 影视数 | number
   --  | -- | --
  @toggleTabs  | 切换tab选项卡事件 | event
+
+  FanjuPanel  | 注释  | 类型
+ ---- | ----- | ------ 
+ searchResult  | 搜索结果的番剧列表 | 数组对象
+  --  | searchResult注释 | --
+  --  | 该数据是传到FanjuPanel组件中的fanjuCard子组件中 | --
+  --  | 所以在此省略fanjuCard组件的注释 | --
+ id  | id | number
+ fanjuImg  | 番剧poster | url
+ title  | 番剧标题 | string
+ fanjuHref  | 番剧链接 | href
+
+  UpPanel  | 注释  | 类型
+ ---- | ----- | ------ 
+ searchResult  | 搜索结果的up主列表 | 数组对象
+  --  | searchResult注释 | --
+  --  | 该数据是传到UpPanel组件中的upCard子组件中 | --
+  --  | 所以在此省略upCard组件的注释 | --
+ uid  | up主id | number
+ upImg  | up头像 | url
+ name  | 名字 | string
+ fansNum  | 粉丝数 | number
+ videoNum  | 视频数 | number
+ sign  | 签名 | string
+ upHref  | up个人空间链接 | href
+
+  TvPanel  | 注释  | 类型
+ ---- | ----- | ------ 
+ searchResult  | 搜索结果的影视列表 | 数组对象
+  --  | searchResult注释 | --
+  --  | 该数据是传到TvPanel组件中的tvCard子组件中 | --
+  --  | 所以在此省略tvCard组件的注释 | --
+ id  | id | number
+ tvImg  | 影视poster | url
+ title  | 标题 | string
+ area  | 地区 | number
+ cv  | 演员 | number
+ staff  | 导演 | string
+ tvHref  | 影视链接 | href

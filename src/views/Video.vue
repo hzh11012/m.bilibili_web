@@ -19,12 +19,16 @@
     ></video-info>
     <video-related :videoRelated="videoDetail.VideoRelated"></video-related>
     <video-comments class="comments" :VideoComments="videoDetail.VideoComments"></video-comments>
+    <van-popup v-model="isShowShare" position="bottom">
+      <share-panel @cancel="cancel"></share-panel>
+    </van-popup>
     <pagego-top></pagego-top>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/common/NavBar.vue";
+import SharePanel from "@/components/common/SharePanel.vue";
 import VideoPlayer from "@/components/Video/VideoPlayer.vue";
 import VideoInfo from "@/components/Video/VideoInfo.vue";
 import VideoRelated from "@/components/Video/VideoRelated.vue";
@@ -33,6 +37,7 @@ import PagegoTop from "@/components/common/PagegoTop.vue";
 export default {
   components: {
     NavBar,
+    SharePanel,
     VideoPlayer,
     VideoInfo,
     VideoRelated,
@@ -161,11 +166,11 @@ export default {
         VideoComments: {
           nums: 7413,
           avatarImg: require("@/assets/picture/m.jpg"),
-          comment: [
-          ]
+          comment: []
         }
       },
-      userImg: require("@/assets/picture/m.jpg")
+      userImg: require("@/assets/picture/m.jpg"),
+      isShowShare: false
     };
   },
   methods: {
@@ -188,7 +193,7 @@ export default {
       console.log("缓存");
     },
     fenxiang() {
-      console.log("分享");
+      this.isShowShare = true;
     },
     pinglun() {
       //滑动到评论处
@@ -196,6 +201,9 @@ export default {
       this.$nextTick(function() {
         window.scrollTo({ behavior: "smooth", top: el.offsetTop });
       });
+    },
+    cancel() {
+      this.isShowShare = false;
     }
   },
   created() {
