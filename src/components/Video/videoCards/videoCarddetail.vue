@@ -91,10 +91,11 @@ a {
         display: flex;
       }
       .author {
-        align-videos: center;
+        align-items: center;
         margin-bottom: 1.06667vw;
         i {
           margin-right: 1.33333vw;
+          font-size: 4.444vw;
         }
       }
       .count {
@@ -102,10 +103,11 @@ a {
           margin-right: 2.66667vw;
         }
         span {
-          align-videos: center;
+          align-items: center;
           display: flex;
           i {
             margin-right: 1.33333vw;
+            font-size: 4.444vw;
           }
         }
       }

@@ -18,7 +18,7 @@
           <div class="display">
             <div class="load-layer" v-show="loadLayer" @click="playVideo(),loadLayer=false">
               <img src="@/assets/video_play.png" />
-              <div>{{duration | setTime}}</div>
+              <div class="dur" >{{duration | setTime}}</div>
             </div>
             <div class="ShowControl" v-show="playstate" @click="isShowControl = !isShowControl"></div>
             <div class="control-bar" v-show="isShowControl">
@@ -314,16 +314,16 @@ export default {
           }
           div {
             position: absolute;
-            bottom: 18px;
-            left: 12px;
-            border: 1px solid hsla(0, 0%, 100%, 0.6);
+            bottom: 5vw;
+            left: 3.333vw;
+            border: 0.278vw solid hsla(0, 0%, 100%, 0.6);
             background-color: hsla(0, 0%, 100%, 0.2);
-            padding-left: 8px;
-            padding-right: 8px;
-            border-radius: 2px;
+            padding-left: 2.222vw;
+            padding-right: 2.222vw;
+            border-radius: 0.556vw;
             color: #fff;
-            font-size: 12px;
-            line-height: 20px;
+            font-size: 3.333vw;
+            line-height: 5.556vw;
             text-align: center;
           }
         }

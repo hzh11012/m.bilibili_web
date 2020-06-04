@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props: ["placeholder", "value","isShowGuanbi"],
+  props: ["placeholder", "value", "isShowGuanbi"],
   model: {
     porp: "value",
     event: "getInputValue"
@@ -57,6 +57,7 @@ export default {
     display: inline-block;
     .ic_search {
       font-size: 5.33333vw;
+      float: left;
       color: #a0a0a0;
       vertical-align: middle;
     }

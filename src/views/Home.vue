@@ -13,6 +13,7 @@
         ></nav-bar>
         <div>
           <tabs :tabList="tabList" @changeTab="changeTab"></tabs>
+          <!-- <test :tabList="tabList" @changeTab="changeTab" ></test> -->
         </div>
       </div>
     </div>

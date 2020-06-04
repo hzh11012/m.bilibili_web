@@ -196,13 +196,13 @@ export default {
       .gender {
         margin-left: 1.06667vw;
         i {
-          font-size: 12px;
+          font-size: 3.333vw;
         }
       }
       .level {
         margin: 0.5vw 0 0 1.06667vw;
         i {
-          font-size: 23px;
+          font-size: 6.389vw;
         }
       }
       .vip {
